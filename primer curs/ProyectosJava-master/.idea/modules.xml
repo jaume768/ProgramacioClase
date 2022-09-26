@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CalcularDividendos/CalcularDividendos.iml" filepath="$PROJECT_DIR$/CalcularDividendos/CalcularDividendos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lista de tareas/Lista de tareas.iml" filepath="$PROJECT_DIR$/Lista de tareas/Lista de tareas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PiedraPapelTijeras/PiedraPapelTijeras.iml" filepath="$PROJECT_DIR$/PiedraPapelTijeras/PiedraPapelTijeras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ProyectosJava-main.iml" filepath="$PROJECT_DIR$/.idea/ProyectosJava-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prueba/Prueba.iml" filepath="$PROJECT_DIR$/Prueba/Prueba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ejercicis easy/ejercicis easy.iml" filepath="$PROJECT_DIR$/ejercicis easy/ejercicis easy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/joc/joc.iml" filepath="$PROJECT_DIR$/joc/joc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/prueba printf/prueba printf.iml" filepath="$PROJECT_DIR$/prueba printf/prueba printf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabla de multiplicar/tabla de multiplicar.iml" filepath="$PROJECT_DIR$/tabla de multiplicar/tabla de multiplicar.iml" />
+    </modules>
+  </component>
+</project>
