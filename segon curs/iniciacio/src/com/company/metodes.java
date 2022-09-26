@@ -7,14 +7,14 @@ import java.util.Scanner;
 public class metodes {
 
     List<ballena> llistaballenas = new ArrayList<ballena>();
+    Scanner entrada = new Scanner (System.in);
 
     public void CrearBallenas(){
 
         entradas Entrada = new entradas();
-        Scanner entrada = new Scanner (System.in);
+
         int NumeroBallenas;
         int i = 0;
-
         System.out.println("Dime el numero de ballenas a crear: ");
         NumeroBallenas = entrada.nextInt();
 
@@ -41,6 +41,18 @@ public class metodes {
             System.out.println("--------------------------------------------");
 
         }
+
+    }
+
+    public int ComprarDuesBallenes(){
+
+        System.out.println("Com a molt es poden comparar dues ballenes, dim la posició de la primera ballena a comprar: ");
+        int primera = entrada.nextInt()-1;
+
+        System.out.println("Dim la posicio de la segona ballena: ");
+        int segona = entrada.nextInt()-1;
+
+        return (llistaballenas.get(primera).getKilos() - llistaballenas.get(segona).getKilos());
 
     }
 
