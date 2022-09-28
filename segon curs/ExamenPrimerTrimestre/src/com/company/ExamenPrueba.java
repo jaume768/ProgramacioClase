@@ -12,10 +12,12 @@ public class ExamenPrueba {
         //Exercici6(matriu);
         //Exercici7(matriu); crec que no esta correcte
         //Exercici8(matriu);
+        //Exercici9(matriu);
 
-        //Demanar es Exercici 9
+        // Demanar exercici 10
 
-
+        //Exercici11(matriu);
+        //Exercici12(matriu);
 
     }
 
@@ -139,5 +141,101 @@ public class ExamenPrueba {
 
     }
 
+    public static void Exercici9(int[] matriu){
+
+        int NombreASercar = 13;
+
+        for (int i = 0; i < matriu.length; i++) {
+
+            if (NombreASercar == matriu[i]){
+
+                NombreASercar = i;
+                i = matriu.length;
+
+            } else if (i == matriu.length-1){
+
+                NombreASercar = -1;
+
+            }
+
+        }
+
+        System.out.println("Nombre a sercar: " + NombreASercar);
+
+    }
+
+    public static void Exercici10(int[] matriu){
+
+        int Mitjana = 0;
+        int NombreProper = 0;
+
+        for (int i = 0; i < matriu.length; i++) {
+
+            Mitjana += matriu[i];
+
+        }
+
+        Mitjana = Mitjana/matriu.length;
+
+        
+
+        System.out.println("La mitjana es:" + Mitjana);
+        System.out.println("El nombre mes proper de l'array es: " + NombreProper);
+
+    }
+
+    public static void Exercici11(int[] matriu){
+
+        int Posicio = 2;
+        int temp1;
+
+        for (int i = 0; i < matriu.length; i++) {
+
+            if (matriu[Posicio] < matriu[i]){
+
+                temp1 = matriu[Posicio];
+                matriu[Posicio] = matriu[i];
+                matriu[i] = temp1;
+
+                i = matriu.length;
+
+            }
+
+        }
+
+        for (int i = 0; i < matriu.length; i++) {
+
+            System.out.print(matriu[i] + ",");
+
+        }
+
+    }
+
+    public static void Exercici12(int[] matriu){
+
+        int n=matriu.length;
+        int temp;
+
+        for(int j = 0;j<n;j++){
+
+            for (int i = 0;i<(n-1)-j;i++) {
+
+                if (matriu[i] > matriu[i+1]) {
+
+                    temp = matriu[i];
+                    matriu[i] = matriu[i+1];
+                    matriu[i+1] = temp;
+
+                }
+            }
+        }
+
+        for (int i = 0; i < matriu.length; i++) {
+
+            System.out.print(matriu[i] + ",");
+
+        }
+
+    }
 
 }
