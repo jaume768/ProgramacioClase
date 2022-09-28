@@ -5,23 +5,12 @@ public class ExamenPrueba {
     public static void main(String[] args) {
 
         int[] matriu = {12,13,54,23,12,354,34,3};
-        //Exercici1(matriu);
-        //Exercici2(matriu);
-        //Exercici3(matriu);
-        // Els ejercicis 4 i 5 es el mateix que els 2 i 3 pero invertit els resultats
-        //Exercici6(matriu);
-        //Exercici7(matriu); crec que no esta correcte
-        //Exercici8(matriu);
-        //Exercici9(matriu);
 
-        // Demanar exercici 10
-
-        //Exercici11(matriu);
-        //Exercici12(matriu);
+        System.out.println(SercarNombre(matriu));
 
     }
 
-    public static void Exercici1(int[] matriu){
+    public static int MitjanaAritmetica(int[] matriu){
 
         int media = 0;
 
@@ -31,11 +20,11 @@ public class ExamenPrueba {
 
         }
 
-        System.out.println(media/matriu.length);
+        return media/matriu.length;
 
     }
 
-    public static void Exercici2(int[] matriu){
+    public static int ValorMinim(int[] matriu){
 
         int valorMinim = matriu[0];
 
@@ -45,11 +34,11 @@ public class ExamenPrueba {
 
         }
 
-        System.out.println(valorMinim);
+        return valorMinim;
 
     }
 
-    public static void Exercici3(int[] matriu){
+    public static int IndexValorMinim(int[] matriu){
 
         int valorMinim = matriu[0];
 
@@ -57,23 +46,13 @@ public class ExamenPrueba {
 
             valorMinim = valorMinim > matriu[i] ? i : matriu[i];
 
-            /*
-
-            Mateixa solució pero mes visible la resolució
-
-            if (valorMinim > matriu[i]){
-                valorMinim = i;
-            }
-
-            */
-
         }
 
-        System.out.println(valorMinim);
+        return valorMinim;
 
     }
 
-    public static void Exercici6(int[] matriu){
+    public static boolean MatriuOrdenadaAsc(int[] matriu){
 
         int nombre = matriu[0];
         boolean ascandent = false;
@@ -90,11 +69,11 @@ public class ExamenPrueba {
 
         }
 
-        System.out.println(ascandent);
+        return ascandent;
 
     }
 
-    public static void Exercici7(int[] matriu){
+    public static boolean MatriuOrdenadaDesc(int[] matriu){
 
         int nombre = matriu[0];
         boolean descendent = false;
@@ -111,16 +90,16 @@ public class ExamenPrueba {
 
         }
 
-        System.out.println(descendent);
+        return descendent;
 
     }
 
-    public static void Exercici8(int[] matriu){
+    public static int[] MatriuInversa(int[] matriu){
 
         int[] novaMatriu = {12,13,54,23,12,354,34,3};
         int contadorInvers = matriu.length-1;
-        int temp1 = 0;
-        int temp2 = 0;
+        int temp1;
+        int temp2;
 
         for (int i = 0; i < matriu.length/2; i++) {
 
@@ -133,15 +112,11 @@ public class ExamenPrueba {
 
         }
 
-        for (int i = 0; i < novaMatriu.length; i++) {
-
-            System.out.print(novaMatriu[i] + ",");
-
-        }
+        return novaMatriu;
 
     }
 
-    public static void Exercici9(int[] matriu){
+    public static int SercarNombre(int[] matriu){
 
         int NombreASercar = 13;
 
@@ -160,31 +135,40 @@ public class ExamenPrueba {
 
         }
 
-        System.out.println("Nombre a sercar: " + NombreASercar);
+        return NombreASercar;
 
     }
 
-    public static void Exercici10(int[] matriu){
+    public static int NombreProperMitjana(int[] matriu){
 
-        int Mitjana = 0;
-        int NombreProper = 0;
+        int Mitjana = MitjanaAritmetica(matriu);
+        int PosicoIndex = 0;
+        int Diferencia = 0;
+        int temp1 = matriu[0] - Mitjana;
 
         for (int i = 0; i < matriu.length; i++) {
 
-            Mitjana += matriu[i];
+            if (matriu[i] - Mitjana > temp1){
+
+                temp1 = matriu[i] - Mitjana;
+
+                if (temp1 > matriu[PosicoIndex] - Mitjana) {
+
+                    Diferencia = matriu[PosicoIndex] - Mitjana;
+
+                }
+
+                PosicoIndex = i;
+
+            }
 
         }
 
-        Mitjana = Mitjana/matriu.length;
-
-        
-
-        System.out.println("La mitjana es:" + Mitjana);
-        System.out.println("El nombre mes proper de l'array es: " + NombreProper);
+        return Diferencia;
 
     }
 
-    public static void Exercici11(int[] matriu){
+    public static int[] IntercanviarValors(int[] matriu){
 
         int Posicio = 2;
         int temp1;
@@ -203,15 +187,11 @@ public class ExamenPrueba {
 
         }
 
-        for (int i = 0; i < matriu.length; i++) {
-
-            System.out.print(matriu[i] + ",");
-
-        }
+        return matriu;
 
     }
 
-    public static void Exercici12(int[] matriu){
+    public static int[] OrdenacioArray(int[] matriu){
 
         int n=matriu.length;
         int temp;
@@ -229,6 +209,12 @@ public class ExamenPrueba {
                 }
             }
         }
+
+        return matriu;
+
+    }
+
+    public static void ImprimirArray(int[] matriu){
 
         for (int i = 0; i < matriu.length; i++) {
 
