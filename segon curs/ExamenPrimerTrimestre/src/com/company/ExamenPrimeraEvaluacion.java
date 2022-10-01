@@ -10,9 +10,8 @@ public class ExamenPrimeraEvaluacion {
 
         char[] Delimitadors = {' ',',','-','.','!','?'};
 
-        //System.out.println(ParaulaAPartirDelIndex(MatriuDeChars(provaExecucio),4));
+        System.out.println(EsDelimitador(MatriuDeChars(provaExecucio),Delimitadors));
 
-        System.out.println(EsPalindroma(ParaulaAPartirDelIndex(MatriuDeChars(provaExecucio),19)));
 
     }
 
@@ -44,7 +43,7 @@ public class ExamenPrimeraEvaluacion {
     public static boolean EsDelimitador(char[] ArrayChars,char[] Delimitadors){
 
         boolean EsDelimitador = false;
-        int posicioDonada = 3;
+        int posicioDonada = 57; //es una coma en el text
 
         for (int i = 0; i < Delimitadors.length; i++) {
 
@@ -150,5 +149,71 @@ public class ExamenPrimeraEvaluacion {
         return EsPalindroma;
 
     }
+
+    public static int NombreParaulesPalindromes(String Frase){
+
+        int NombrePalindromes = 0;
+        char[] TextCodificat = MatriuDeChars(Frase);
+        String Paraula = "";
+
+        for (int i = 0; i < TextCodificat.length; i++) {
+
+            if (EsIniciDeParaula(TextCodificat,i)){
+
+                Paraula = ParaulaAPartirDelIndex(TextCodificat,i);
+
+                if (EsPalindroma(Paraula)){
+
+                    ++NombrePalindromes;
+
+                }
+
+            }
+
+        }
+
+        return NombrePalindromes;
+
+    }
+
+    public static String[] ArrayDePalindromes(String Frase){
+
+        String[] ArrayPalindromes = new String[NombreParaulesPalindromes(Frase)];
+        char[] ArrayChar = MatriuDeChars(Frase);
+        String Paraula = "";
+        int NombrePolindromes = 0;
+
+        for (int i = 0; i < ArrayChar.length; i++) {
+
+            if (EsIniciDeParaula(ArrayChar,i)){
+
+                Paraula = ParaulaAPartirDelIndex(ArrayChar,i);
+
+                if (EsPalindroma(Paraula)){
+
+                    ArrayPalindromes[NombrePolindromes] = Paraula;
+                    ++NombrePolindromes;
+
+                }
+
+            }
+
+        }
+
+        return ArrayPalindromes;
+
+    }
+
+    public static void ImprimirArrayStrings(String[] ArrayStrings){
+
+        for (int i = 0; i < ArrayStrings.length; i++) {
+
+            System.out.println(ArrayStrings[i]);
+
+        }
+
+    }
+
+
 
 }
