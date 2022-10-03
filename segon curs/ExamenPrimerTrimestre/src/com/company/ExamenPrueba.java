@@ -6,7 +6,7 @@ public class ExamenPrueba {
 
         int[] matriu = {12,13,54,23,12,354,34,3};
 
-        System.out.println(SercarNombre(matriu));
+        System.out.println(SercarNombre(matriu,2));
 
     }
 
@@ -116,9 +116,7 @@ public class ExamenPrueba {
 
     }
 
-    public static int SercarNombre(int[] matriu){
-
-        int NombreASercar = 13;
+    public static int SercarNombre(int[] matriu, int NombreASercar){
 
         for (int i = 0; i < matriu.length; i++) {
 
@@ -168,9 +166,8 @@ public class ExamenPrueba {
 
     }
 
-    public static int[] IntercanviarValors(int[] matriu){
+    public static int[] IntercanviarValors(int[] matriu,int Posicio){
 
-        int Posicio = 2;
         int temp1;
 
         for (int i = 0; i < matriu.length; i++) {
