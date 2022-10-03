@@ -10,9 +10,6 @@ public class ExamenPrimeraEvaluacion {
 
         char[] Delimitadors = {' ',',','-','.','!','?'};
 
-        System.out.println(EsDelimitador(MatriuDeChars(provaExecucio),Delimitadors));
-
-
     }
 
     public static char[] MatriuDeChars(String prova){
@@ -214,6 +211,65 @@ public class ExamenPrimeraEvaluacion {
 
     }
 
+    /*public static int CombinacionsDeLletres(char[] ArrayChars,String Frase){
 
+        int NombreAparicions = 0;
+        ArrayChars = MatriuDeChars(Frase);
+        char[] ArrayAbecedario = {'a','b','c','d'};
+        int[][] NombreAnex = new int[ArrayAbecedario.length][ArrayAbecedario.length];
+
+
+        return NombreAparicions;
+
+    }
+     */
+
+    public static String[] OrdenarArrayStrings(String[] ArrayDesordenada){
+
+        String temp = "";
+
+        for(int i=1; i<=ArrayDesordenada.length; i++) {
+            for(int j=0; j<ArrayDesordenada.length-i; j++) {
+                if( ArrayDesordenada[j].compareTo( ArrayDesordenada[j+1] ) > 0 ) {
+
+                    temp   = ArrayDesordenada[j];
+                    ArrayDesordenada[j]  = ArrayDesordenada[j+1];
+                    ArrayDesordenada[j+1]= temp;
+
+                }
+            }
+        }
+
+        return ArrayDesordenada;
+
+    }
+
+    public static void ImprimirArrayStringsVerticals(String[] Array){
+
+        String Paraula = "";
+
+        for (int i = 0; i < Array.length; i++) {
+
+            Paraula = Array[i];
+            char[] ParaulaChar = MatriuDeChars(Paraula);
+
+            for (int j = 0; j < ParaulaChar.length; j++) {
+
+                for (int k = 0; k < i; k++) {
+
+                    System.out.print(" ");
+
+                }
+
+                System.out.println(ParaulaChar[j]);
+
+            }
+
+
+        }
+
+        // No funciona del tot be
+
+    }
 
 }
