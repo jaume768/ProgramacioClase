@@ -6,13 +6,15 @@ public class player {
     private String name;
     private int number;
     private String team;
+    private int goals;
 
-    public player(int id,String name, int number, String team){
+    public player(int id,String name, int number, String team,int goals){
 
         this.id = id;
         this.name = name;
         this.number = number;
         this.team = team;
+        this.goals = goals;
 
     }
 
@@ -30,6 +32,14 @@ public class player {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public void setgoals(int goals) {
+        this.goals = goals;
+    }
+
+    public int getgoals() {
+        return goals;
     }
 
     public String getName() {

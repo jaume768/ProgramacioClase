@@ -30,13 +30,14 @@ public class team {
         this.name = name;
     }
 
-    public void setPlayers(int id,String name, int number, String team) {
+    public void setPlayers(int id,String name, int number, String team, int goals) {
 
-        players.add(new player(id,name,number,team));
+        players.add(new player(id,name,number,team,goals));
 
     }
 
     public ArrayList<player> getPlayers() {
         return players;
     }
+
 }
