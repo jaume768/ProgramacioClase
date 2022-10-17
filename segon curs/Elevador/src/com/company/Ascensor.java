@@ -8,7 +8,7 @@ public class Ascensor {
     public int Subir(){
 
         if (this.PisoActual == PisoMaximo){
-            System.out.println("No se pude subir mas pisos");
+            System.out.println("No se pude subir mas pisos.");
             return this.PisoActual;
         }
 

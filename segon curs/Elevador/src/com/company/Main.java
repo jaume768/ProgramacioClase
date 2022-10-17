@@ -46,19 +46,23 @@ public class Main {
 
     public static int CalcularPisoActual(Ascensor ascensor, int Decision){
 
-        if (Decision == 2){
+        switch (Decision){
 
-            ascensor.Bajar();
-            return ascensor.GetPisoActual();
+            case 1:
 
-        } else if (Decision == 1){
+                ascensor.Subir();
+                return ascensor.GetPisoActual();
 
-            ascensor.Subir();
-            return ascensor.GetPisoActual();
+            case 2:
+
+                ascensor.Bajar();
+                return ascensor.GetPisoActual();
+
+            default:
+
+                return -1;
 
         }
-
-        return -1;
 
     }
 
