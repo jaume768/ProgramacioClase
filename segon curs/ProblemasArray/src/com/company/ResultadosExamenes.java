@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class ResultadosExamenes {
 
-    public static void main(String[] args) {
+    static Scanner leer = new Scanner(System.in);
 
-        Scanner leer = new Scanner(System.in);
+    public static void main(String[] args) {
 
         System.out.println("Dime cuantos alumnos tienes: ");
         int NombreAlumnes = leer.nextInt();
@@ -21,7 +21,6 @@ public class ResultadosExamenes {
     public static int[] NotasAlumnos(int NombreAlumnes){
 
         int[] Notas = new int[NombreAlumnes];
-        Scanner leer = new Scanner(System.in);
 
         for (int i = 0; i < Notas.length; i++) {
 
