@@ -9,25 +9,34 @@ public class Main {
 
         Ascensor ascensor = new Ascensor();
 
-        BuclePisos(ascensor);
+        SubirOBajarPisos(ascensor);
+
 
     }
 
-    public static void BuclePisos(Ascensor ascensor){
+    public static void SubirOBajarPisos(Ascensor ascensor){
 
         int Decision = 0;
 
         while (Decision != 3) {
 
             Decision = PedirMenu();
-            if (Decision != 3){
 
-                System.out.println("Piso actual: " + SubirOBajarPisos(ascensor,Decision));
+            // Caso Salir ascensor
+            if (Decision == 3){
+                System.out.println("Saliendo del ascensor.....");
+                continue;
+            }
+
+            // Caso Principal
+            if (Decision < 3 && Decision > 0){
+
+                System.out.println("Piso actual: " + CalcularPisoActual(ascensor,Decision));
                 System.out.println("---------------------");
 
             } else {
 
-                System.out.println("Saliendo del ascensor.....");
+                System.out.println("Eliga una opción del menu valida!!");
 
             }
 
@@ -36,7 +45,7 @@ public class Main {
 
     }
 
-    public static int SubirOBajarPisos(Ascensor ascensor, int Decision){
+    public static int CalcularPisoActual(Ascensor ascensor, int Decision){
 
         int PisosMaximo = 5;
 
@@ -60,13 +69,11 @@ public class Main {
         if (Decision == 2 && ascensor.GetPisoActual() > 0){
 
             ascensor.Bajar();
-            System.out.println("Bajando piso...");
             return ascensor.GetPisoActual();
 
         } else if (Decision == 1 && ascensor.GetPisoActual() < PisosMaximo){
 
             ascensor.Subir();
-            System.out.println("Subiendo piso...");
             return ascensor.GetPisoActual();
 
         }
@@ -85,4 +92,5 @@ public class Main {
         return sc.nextInt();
 
     }
+
 }

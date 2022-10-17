@@ -6,12 +6,14 @@ public class Ascensor {
 
     public int Subir(){
 
+        System.out.println("Subiendo piso...");
         return this.PisoActual++;
 
     }
 
     public int Bajar(){
 
+        System.out.println("Bajando piso...");
         return this.PisoActual--;
 
     }
