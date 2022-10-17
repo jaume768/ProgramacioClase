@@ -11,7 +11,6 @@ public class Main {
 
         SubirOBajarPisos(ascensor);
 
-
     }
 
     public static void SubirOBajarPisos(Ascensor ascensor){
@@ -47,31 +46,12 @@ public class Main {
 
     public static int CalcularPisoActual(Ascensor ascensor, int Decision){
 
-        int PisosMaximo = 5;
-
-        //Caso 1
-        if (Decision == 2 && ascensor.GetPisoActual() == 0){
-
-            System.out.println("No se puede bajar mas del piso 0");
-            return ascensor.GetPisoActual();
-
-        }
-
-        //Caso 2
-        if (Decision == 1 && ascensor.GetPisoActual() == PisosMaximo){
-
-            System.out.println("No se puede subir mas del piso maximo");
-            return ascensor.GetPisoActual();
-
-        }
-
-        // Caso Principal
-        if (Decision == 2 && ascensor.GetPisoActual() > 0){
+        if (Decision == 2){
 
             ascensor.Bajar();
             return ascensor.GetPisoActual();
 
-        } else if (Decision == 1 && ascensor.GetPisoActual() < PisosMaximo){
+        } else if (Decision == 1){
 
             ascensor.Subir();
             return ascensor.GetPisoActual();
