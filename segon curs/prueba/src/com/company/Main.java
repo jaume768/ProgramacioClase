@@ -4,16 +4,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int Suma = 0;
+        System.out.println(MediaFinal());
 
-        for (int i = 0; i < 10; i++){
+    }
 
-            Suma += i;
+    public static int SacarMedia(){
 
-        }
+        int nota1 = 2;
+        int nota2 = 5;
+        int nota3 = 5;
 
-        System.out.println(Suma);
+        int media = (nota1 + nota2 + nota3)/3;
 
+        return media;
+
+    }
+
+    public static int MediaFinal(){
+
+        int MediaFinal = SacarMedia() + 2;
+
+        return MediaFinal;
 
     }
 
