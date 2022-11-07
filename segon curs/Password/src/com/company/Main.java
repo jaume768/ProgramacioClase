@@ -4,8 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Password password = new Password();
-
         char[] AbecedarioYNumeros = new char[62];
 
         System.out.println("Contraseña fuerte: " + generarPasswordFuerte(AbecedarioYNumeros,10));

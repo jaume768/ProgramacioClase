@@ -4,9 +4,9 @@ public class ExamenPrueba {
 
     public static void main(String[] args) {
 
-        int[] matriu = {12,13,54,23,12,354,34,3};
+        int[] matriu = {12,13,54,3,23,12,354,64};
 
-        System.out.println(SercarNombre(matriu,2));
+        System.out.println(NombreProperMitjana(matriu));
 
     }
 
@@ -140,19 +140,25 @@ public class ExamenPrueba {
     public static int NombreProperMitjana(int[] matriu){
 
         int Mitjana = MitjanaAritmetica(matriu);
+
+        System.out.println(Mitjana);
+
         int PosicoIndex = 0;
-        int Diferencia = 0;
+        int Diferencia;
         int temp1 = matriu[0] - Mitjana;
+        int valor = 0;
 
         for (int i = 0; i < matriu.length; i++) {
 
-            if (matriu[i] - Mitjana > temp1){
+            Diferencia = matriu[i] - Mitjana;
+
+            if (Diferencia > temp1){
 
                 temp1 = matriu[i] - Mitjana;
 
                 if (temp1 > matriu[PosicoIndex] - Mitjana) {
 
-                    Diferencia = matriu[PosicoIndex] - Mitjana;
+                    valor = matriu[PosicoIndex];
 
                 }
 
@@ -162,7 +168,7 @@ public class ExamenPrueba {
 
         }
 
-        return Diferencia;
+        return valor;
 
     }
 

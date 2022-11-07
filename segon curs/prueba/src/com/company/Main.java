@@ -4,29 +4,43 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(MediaFinal());
+        int[] Array = new int[20];
+
+        Array = LlenarArray(Array);
+
+        System.out.println(Media(Array));
 
     }
 
-    public static int SacarMedia(){
+    public static int[] LlenarArray(int[] Array){
 
-        int nota1 = 2;
-        int nota2 = 5;
-        int nota3 = 5;
+        for (int i = 0; i < Array.length; i++) {
 
-        int media = (nota1 + nota2 + nota3)/3;
+            Array[i] = i;
 
-        return media;
+        }
+
+        return Array;
+
+    }
+
+    public static int Media(int[] Array){
+
+        int Suma = 0;
+        int Media;
+
+        for (int i = 0; i < Array.length; i++) {
+
+            Suma += Array[i];
+
+        }
+
+        Media = Suma/Array.length;
+
+        return Media;
 
     }
 
-    public static int MediaFinal(){
-
-        int MediaFinal = SacarMedia() + 2;
-
-        return MediaFinal;
-
-    }
 
 }
 

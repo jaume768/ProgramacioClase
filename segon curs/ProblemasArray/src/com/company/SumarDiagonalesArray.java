@@ -10,7 +10,7 @@ public class SumarDiagonalesArray {
         int[][] Array = new int[2][2];
         Array = RellenarArray(Array);
 
-        System.out.println(SumarFiles(1,Array));
+        System.out.println(SumarColumnes(0,Array));
 
     }
 
@@ -43,5 +43,21 @@ public class SumarDiagonalesArray {
         return Suma;
 
     }
+
+    public static int SumarColumnes(int Columna,int[][] Array){
+
+        int Suma = 0;
+
+        for (int i = 0; i < Array.length; i++) {
+
+            Suma += Array[i][Columna];
+
+        }
+
+        return Suma;
+
+    }
+
+
 
 }
