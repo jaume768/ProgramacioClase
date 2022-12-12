@@ -10,14 +10,14 @@ public class SumarDiagonalesArray {
         int[][] Array = new int[2][2];
         Array = RellenarArray(Array);
 
-        System.out.println(SumarColumnes(0,Array));
+        System.out.println(SumarColumnes(1,Array));
 
     }
 
     public static int[][] RellenarArray(int[][] Array){
 
         for (int i = 0; i < Array.length; i++) {
-            for (int j = 0; j < Array.length; j++) {
+            for (int j = 0; j < Array[0].length; j++) {
 
                 System.out.println("Dime el valor de la posición " + i + " " + j + ": ");
                 Array[i][j] = sc.nextInt();

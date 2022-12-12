@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75b03dbb-cc3b-42a0-94d2-c9ea1989f6b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Elevador/src/com/company/Ascensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prueba/src/com/company/mando.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProblemasArray/src/com/company/duplicando.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProblemasArray/src/com/company/posicionArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProblemasArray/out/production/Problemas/com/company/ResultadosExamenes.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ProblemasArray/out/production/Problemas/com/company/ResultadosExamenes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProblemasArray/out/production/Problemas/com/company/productorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ProblemasArray/out/production/Problemas/com/company/productorio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProblemasArray/src/com/company/ResultadosExamenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProblemasArray/src/com/company/ResultadosExamenes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProblemasArray/src/com/company/productorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProblemasArray/src/com/company/productorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProblemasArray/out/production/Problemas/com/company/SumarDiagonalesArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ProblemasArray/out/production/Problemas/com/company/SumarDiagonalesArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProblemasArray/src/com/company/SumarDiagonalesArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProblemasArray/src/com/company/SumarDiagonalesArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProblemasArray" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ExamenPrimerTrimestre" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
