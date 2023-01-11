@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Locale;
 
 public class ExamenPrimeraEvaluacion {
@@ -9,6 +10,8 @@ public class ExamenPrimeraEvaluacion {
         String provaExecucio = "Una noia anomenada Anna va anar a cercar al b)osc un home, alla hi va trobar un cec que intentava trobar un figura de metall d'un cuc ben rar. Astorada li va dir que si no ho intentava amb un radar no crec que el trobis. Amb un aparell d'aquests que fan pipiripip segur que el trobraras encara que estigui ben tapat !";
 
         char[] Delimitadors = {' ',',','-','.','!','?'};
+
+        System.out.println(Arrays.toString(OrdenarArrayStrings(ArrayDePalindromes(provaExecucio))));
 
     }
 
@@ -37,22 +40,19 @@ public class ExamenPrimeraEvaluacion {
 
     }
 
-    public static boolean EsDelimitador(char[] ArrayChars,char[] Delimitadors){
-
-        boolean EsDelimitador = false;
-        int posicioDonada = 57; //es una coma en el text
+    public static boolean EsDelimitador(char[] ArrayChars,char[] Delimitadors, int posicioDonada){
 
         for (int i = 0; i < Delimitadors.length; i++) {
 
             if (Delimitadors[i] == ArrayChars[posicioDonada]){
 
-                EsDelimitador = true;
+                return true;
 
             }
 
         }
 
-        return EsDelimitador;
+        return false;
 
 
     }
