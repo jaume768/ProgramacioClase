@@ -20,5 +20,6 @@ public class Main {
         jugador1.moverFicha(tablero,2,1,3,0);
 
         tablero.ImprimirTablero();
+
     }
 }

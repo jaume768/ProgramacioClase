@@ -26,7 +26,9 @@ public class Jugador {
 
         // Verificar que el movimiento sea válido según las reglas del juego
 
-        tablero.moverFicha(casillaOrigen,casillaFinal);
+        if ((filaDestino - filaOrigen) == 1 && ((columnaDestino - columnaOrigen) == 1 || (columnaDestino-columnaOrigen) == -1)){
+            tablero.moverFicha(casillaOrigen,casillaFinal);
+        }
 
         // Actualizar el estado del tablero con el nuevo movimiento
         // Cambiar el turno al otro jugador
