@@ -43,4 +43,19 @@ public class Tablero {
         }
 
     }
+
+    public Casilla getCasilla(int filaOrigen,int columnaOrigen) {
+        return tablero[filaOrigen][columnaOrigen];
+    }
+
+    public void moverFicha(Casilla casillaOrigen, Casilla casillaDestino){
+
+        int filaDestino = casillaDestino.getFila();
+        int columnaDestino = casillaDestino.getColumna();
+        Ficha fichaOrigen = casillaOrigen.getFicha();
+
+        tablero[filaDestino][columnaDestino] = new Casilla(filaDestino,columnaDestino,fichaOrigen);
+        tablero[casillaOrigen.getFila()][casillaOrigen.getColumna()] = new Casilla(casillaOrigen.getFila(),casillaOrigen.getColumna(),null);
+
+    }
 }

@@ -13,5 +13,12 @@ public class Main {
         Tablero tablero = new Tablero();
 
         tablero.ImprimirTablero();
+        System.out.println();
+
+        Jugador jugador1 = new Jugador("n");
+
+        jugador1.moverFicha(tablero,2,1,3,0);
+
+        tablero.ImprimirTablero();
     }
 }
