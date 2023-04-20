@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75b03dbb-cc3b-42a0-94d2-c9ea1989f6b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/ReverseNodesInkGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/SwapNodesInPares.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/integerInvertido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Cesar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP sopaDeLetras/out/production/OOP sopaDeLetras/com/company/Paraula.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP sopaDeLetras/out/production/OOP sopaDeLetras/com/company/Paraula.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP sopaDeLetras/out/production/OOP sopaDeLetras/com/company/Tauler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP sopaDeLetras/out/production/OOP sopaDeLetras/com/company/Tauler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP sopaDeLetras/src/com/company/Paraula.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP sopaDeLetras/src/com/company/Paraula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP sopaDeLetras/src/com/company/Tauler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP sopaDeLetras/src/com/company/Tauler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Problemas/com/company/OrdenarArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Problemas/com/company/OrdenarArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/OrdenarArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/OrdenarArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SolucionSudoku/out/production/SolucionSudoku/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SolucionSudoku/out/production/SolucionSudoku/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SolucionSudoku/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SolucionSudoku/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,11 +105,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SolucionSudoku" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.OrdenarArray">
-    <configuration name="OrdenarArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.OrdenarArray" />
+  <component name="RunManager" selected="Application.Cesar">
+    <configuration name="Cesar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Cesar" />
       <module name="Problemas" />
       <extension name="coverage">
         <pattern>
@@ -118,8 +121,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegularExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.RegularExpression" />
+    <configuration name="OrdenarArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.OrdenarArray" />
       <module name="Problemas" />
       <extension name="coverage">
         <pattern>
@@ -172,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Cesar" />
         <item itemvalue="Application.OrdenarArray" />
         <item itemvalue="Application.ReverseNodesInkGroup" />
         <item itemvalue="Application.SwapNodesInPares" />
         <item itemvalue="Application.integerInvertido" />
-        <item itemvalue="Application.RegularExpression" />
       </list>
     </recent_temporary>
   </component>

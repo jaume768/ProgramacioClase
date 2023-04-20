@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Tauler {
 
     private Lletra[][] lletres;
-    private final int Files = 10;
-    private final int Columnes = 10;
+    private final int Files = 14;
+    private final int Columnes = 14;
     private Paraula[] paraules;
 
     public Tauler(){
@@ -23,7 +23,7 @@ public class Tauler {
         for (int i = 0; i < lletres.length; i++) {
             for (int j = 0; j < lletres.length; j++) {
 
-                lletres[i][j] = new Lletra('X');
+                lletres[i][j] = new Lletra('-');
 
             }
 
@@ -60,6 +60,7 @@ public class Tauler {
             int RandomColumna = 0;
             boolean sePot = false;
 
+            // Aqui comprovam si la paraula se pot inserir de manera horitzontal i vertical
             while (!sePot){
                 RandomFila = NumRandom(lletres.length, 0);
                 RandomColumna = NumRandom(lletres.length, 0);
@@ -67,42 +68,23 @@ public class Tauler {
             }
 
             int NumRandomPerPosicionarParaules = NumRandom(3, 1);
-            int prova = NumRandom(2, 1);
 
-            if (prova == 2){
-
-                paraula = InvertirParaula(paraula);
-
-            }
+            // Aqui se decideix si se inverteix la paraula
+            int DecidirInvertir = NumRandom(2, 1);
+            paraula = (DecidirInvertir == 2) ? InvertirParaula(paraula) : paraula;
 
             if (NumRandomPerPosicionarParaules == 1){
-                int tam_filas = lletres.length;
-                int tam_columnas = lletres[0].length;
-                if (calcularTamDiagonal(RandomFila,RandomColumna,tam_filas,tam_columnas) > paraula.length()){
-                    for (int j = 0; j < paraula.length(); j++) {
 
-                        lletres[RandomFila][RandomColumna] = new Lletra(paraula.charAt(j));
-                        RandomFila++;
-                        RandomColumna++;
-
-                    }
+                // Aqui miram si sa pot posar la paraula en diagonal, sino deim que la posi de manera horitzontal
+                if (calcularTamDiagonal(RandomFila,RandomColumna,Files,Columnes) > paraula.length()){
+                    inserirLletres(NumRandomPerPosicionarParaules,RandomFila,RandomColumna,paraula);
                 } else {
                     NumRandomPerPosicionarParaules = 2;
                 }
-            } else if (NumRandomPerPosicionarParaules == 2){
-                for (int j = 0; j < paraula.length(); j++) {
+            }
 
-                    lletres[RandomFila][RandomColumna] = new Lletra(paraula.charAt(j));
-                    RandomFila++;
-
-                }
-            } else if (NumRandomPerPosicionarParaules == 3){
-                for (int j = 0; j < paraula.length(); j++) {
-
-                    lletres[RandomFila][RandomColumna] = new Lletra(paraula.charAt(j));
-                    RandomColumna++;
-
-                }
+            if (NumRandomPerPosicionarParaules == 2 || NumRandomPerPosicionarParaules == 3){
+                inserirLletres(NumRandomPerPosicionarParaules,RandomFila,RandomColumna,paraula);
             }
 
             contadorParaules++;
@@ -111,11 +93,28 @@ public class Tauler {
 
     }
 
-    // teorema de pitagores
+    // teorema de pitagores per treure la distancia de les diagonals desde una Fila i una Columna donada
     public int calcularTamDiagonal(int fila, int columna, int tam_filas, int tam_columnas) {
         int dx = tam_columnas - columna - 1; // Distancia a la última columna
         int dy = tam_filas - fila - 1; // Distancia a la última fila
         return (int) Math.sqrt(dx * dx + dy * dy) + 1; // Tamaño de la diagonal
+    }
+
+    public void inserirLletres(int posicio,int Fila,int Columna, String paraula) {
+
+        for (int j = 0; j < paraula.length(); j++) {
+
+            lletres[Fila][Columna] = new Lletra(paraula.charAt(j));
+            if (posicio == 1){
+                Columna++;
+                Fila++;
+            } else if (posicio == 3){
+                Columna++;
+            } else if (posicio == 2){
+                Fila++;
+            }
+
+        }
     }
 
     public boolean esPotInserir(String paraula,int fila,int columna){
@@ -131,14 +130,14 @@ public class Tauler {
 
         // Per no posar una paraula sobre un altre de maner horitzontal
         for (int j = 0; j < tam_paraula; j++) {
-            if (lletres[fila][columna+j].getLletra() != 'X') {
+            if (lletres[fila][columna+j].getLletra() != '-') {
                 return false;
             }
         }
 
         // Lo mateix que abans pero en vertical
         for (int i = 0; i < tam_paraula; i++) {
-            if (lletres[fila+i][columna].getLletra() != 'X') {
+            if (lletres[fila+i][columna].getLletra() != '-') {
                 return false;
             }
         }
@@ -157,7 +156,7 @@ public class Tauler {
         return ParaulaInvertida;
     }
 
-    public static int NumRandom(int tamanyMaxim,int suma){
+    public int NumRandom(int tamanyMaxim,int suma){
 
         return (int)Math.floor(Math.random()*tamanyMaxim+suma);
 
@@ -171,7 +170,7 @@ public class Tauler {
         for (int i = 0; i < lletres.length; i++) {
             for (int j = 0; j < lletres.length; j++) {
 
-                if (lletres[i][j].getLletra() != 'X'){
+                if (lletres[i][j].getLletra() != '-'){
                     System.out.print(ANSI_PURPLE + lletres[i][j].getLletra()+ ANSI_RESET);
                 } else {
                     System.out.print(lletres[i][j].getLletra());
