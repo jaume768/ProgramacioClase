@@ -16,10 +16,15 @@ public class Main {
         System.out.println();
 
         Jugador jugador1 = new Jugador("n");
+        Jugador jugador2 = new Jugador("b");
+        Jugador turnoActual;
+        turnoActual = jugador1;
 
+        System.out.println("Turno del color " + turnoActual.getColor());
         jugador1.moverFicha(tablero,2,1,3,0);
+        turnoActual = (turnoActual == jugador1) ? jugador2 : jugador1;
 
-        tablero.ImprimirTablero();
+        System.out.println("Turno del color " + turnoActual.getColor());
 
     }
 }

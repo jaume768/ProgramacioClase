@@ -30,7 +30,16 @@ public class Jugador {
             tablero.moverFicha(casillaOrigen,casillaFinal);
         }
 
+        // Verificar si ha pasado por encima de una dama rival y matarla en el caso correcto
+
+        
+
         // Actualizar el estado del tablero con el nuevo movimiento
-        // Cambiar el turno al otro jugador
+
+        tablero.ImprimirTablero();
+    }
+
+    public String getColor() {
+        return color;
     }
 }
