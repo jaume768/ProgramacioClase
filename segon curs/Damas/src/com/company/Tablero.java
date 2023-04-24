@@ -54,8 +54,16 @@ public class Tablero {
         int columnaDestino = casillaDestino.getColumna();
         Ficha fichaOrigen = casillaOrigen.getFicha();
 
+
         tablero[filaDestino][columnaDestino] = new Casilla(filaDestino,columnaDestino,fichaOrigen);
         tablero[casillaOrigen.getFila()][casillaOrigen.getColumna()] = new Casilla(casillaOrigen.getFila(),casillaOrigen.getColumna(),null);
 
+    }
+
+    public void matarFicha(Casilla casilla){
+        int fila = casilla.getFila();
+        int columna = casilla.getColumna();
+
+        tablero[fila][columna] = new Casilla(fila,columna,null);
     }
 }
