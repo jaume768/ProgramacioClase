@@ -66,4 +66,10 @@ public class Tablero {
 
         tablero[fila][columna] = new Casilla(fila,columna,null);
     }
+
+    public boolean hayFicha(Casilla casilla){
+
+        return (getCasilla(casilla.getFila(),casilla.getColumna()).getFicha() != null);
+
+    }
 }

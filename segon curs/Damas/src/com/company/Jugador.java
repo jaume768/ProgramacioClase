@@ -16,19 +16,13 @@ public class Jugador {
         Casilla casillaOrigen = tablero.getCasilla(filaOrigen,columnaOrigen);
         Casilla casillaFinal = tablero.getCasilla(filaDestino,columnaDestino);
 
-        if (casillaOrigen.getFicha() == null || !casillaOrigen.getFicha().getColor().equals(color)){
-            throw new IllegalArgumentException("La casilla de origen no contiene una ficha del jugador ");
-        }
+        // Verificar y lanzar errores si las casillas no cumplen las condiciones iniciales para hacer un movimiento
 
-        // Verificar que la casilla de destino esté vacía
-
-        if (casillaFinal.getFicha() != null){
-            throw new IllegalArgumentException("La casilla donde lo quieres mover ya contiene una ficha");
-        }
+        verificarCasillas(tablero,casillaOrigen,casillaFinal);
 
         // Verificar que el movimiento sea válido según las reglas del juego
 
-        if ((filaDestino - filaOrigen) >= 1 && (columnaDestino - columnaOrigen) >= 1 || (columnaDestino-columnaOrigen) >= -1 || (filaDestino - filaOrigen) >= -1){
+        if (movimientoValido(filaOrigen,filaDestino,columnaOrigen,columnaDestino)){
             tablero.moverFicha(casillaOrigen,casillaFinal);
         }
 
@@ -48,14 +42,19 @@ public class Jugador {
                 colum = (columnaDestino + 1);
             }
 
-            if (tablero.getCasilla(fila,colum).getFicha() != null){
+            if ((filaDestino - filaOrigen) == -2){
+                fila = (filaDestino + 1);
+                colum = (columnaDestino - 1);
+            }
+
+            Casilla casilla = tablero.getCasilla(fila,colum);
+
+            if (tablero.hayFicha(casilla)){
                 tablero.matarFicha(tablero.getCasilla(fila,colum));
                 jugador.setPunts(jugador.getPunts()+1);
             }
 
         }
-
-        // Actualizar el estado del tablero con el nuevo movimiento
 
         tablero.ImprimirTablero();
     }
@@ -71,4 +70,25 @@ public class Jugador {
     public void setPunts(int punts) {
         this.punts = punts;
     }
+
+    public boolean movimientoValido(int filaOrigen, int filaDestino, int columnaOrigen, int columnaDestino){
+
+        return (filaDestino - filaOrigen) >= 1 && (columnaDestino - columnaOrigen) >= 1 || (columnaDestino-columnaOrigen) >= -1 || (filaDestino - filaOrigen) >= -1;
+
+    }
+
+    public void verificarCasillas(Tablero tablero,Casilla casillaOrigen, Casilla casillaFinal){
+
+        if (!tablero.hayFicha(casillaOrigen) || !casillaOrigen.getFicha().getColor().equals(color)){
+            throw new IllegalArgumentException("La casilla de origen no contiene una ficha del jugador ");
+        }
+
+        // Verificar que la casilla de destino esté vacía
+
+        if (tablero.hayFicha(casillaFinal)){
+            throw new IllegalArgumentException("La casilla donde lo quieres mover ya contiene una ficha");
+        }
+
+    }
+
 }
