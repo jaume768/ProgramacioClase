@@ -1,24 +1,17 @@
 package com.company;
 
-public class Peon extends Ficha{
-
-    public Peon(int fila, int columna, String color) {
+public class Reina extends Ficha{
+    public Reina(int fila, int columna, String color) {
         super(fila, columna, color);
     }
 
     @Override
     public char getTipo() {
-        return 'P';
+        return 'Q';
     }
 
     @Override
     public boolean mover(Casilla casillaOriginal, Casilla casillaDestino) {
-        return true;
-    }
-
-    private boolean esMovimientoValido(Casilla casillaOriginal, Casilla casillaDestino) {
         return false;
     }
-
-
 }

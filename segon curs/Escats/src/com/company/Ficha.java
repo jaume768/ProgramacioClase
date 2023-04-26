@@ -18,4 +18,6 @@ public abstract class Ficha {
     }
 
     public abstract char getTipo();
+
+    public abstract boolean mover(Casilla casillaOriginal, Casilla casillaDestino);
 }
