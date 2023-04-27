@@ -16,7 +16,7 @@ public class Peon extends Ficha{
         return true;
     }
 
-    private boolean esMovimientoValido(Casilla casillaOriginal, Casilla casillaDestino) {
+    public boolean esMovimientoValido(Casilla casillaOriginal, Casilla casillaDestino) {
         return false;
     }
 

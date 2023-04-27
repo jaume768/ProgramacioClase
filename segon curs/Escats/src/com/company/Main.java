@@ -8,5 +8,11 @@ public class Main {
 
         tablero.ImprimirTablero();
 
+        System.out.println();
+
+        Jugador jugador1 = new Jugador("b");
+
+        jugador1.moverFicha(tablero,6,0,5,0);
+
     }
 }

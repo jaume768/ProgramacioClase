@@ -15,4 +15,9 @@ public class Torre extends Ficha{
     public boolean mover(Casilla casillaOriginal, Casilla casillaDestino) {
         return false;
     }
+
+    @Override
+    public boolean esMovimientoValido(Casilla casillaOriginal, Casilla casillaDestino) {
+        return false;
+    }
 }

@@ -99,4 +99,14 @@ public class Tablero {
 
     }
 
+    public Casilla getCasilla(int filaOrigen,int columnaOrigen) {
+        return tablero[filaOrigen][columnaOrigen];
+    }
+
+    public boolean hayFicha(Casilla casilla){
+
+        return (getCasilla(casilla.getFila(),casilla.getColumna()).getFicha() != null);
+
+    }
+
 }
