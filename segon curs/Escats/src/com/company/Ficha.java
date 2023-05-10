@@ -19,7 +19,5 @@ public abstract class Ficha {
 
     public abstract char getTipo();
 
-    public abstract boolean mover(Casilla casillaOriginal, Casilla casillaDestino);
-
-    public abstract boolean esMovimientoValido(Casilla casillaOriginal, Casilla casillaDestino);
+    public abstract boolean esMovimientoValido(Casilla casillaOriginal, Casilla casillaDestino, Tablero tablero);
 }

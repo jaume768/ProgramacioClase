@@ -16,11 +16,12 @@ public class Jugador {
 
         Ficha ficha = tablero.getCasilla(casillaOrigen.getFila(),casillaOrigen.getColumna()).getFicha();
 
-        if (ficha.esMovimientoValido(casillaOrigen,casillaFinal)){
-            ficha.mover(casillaOrigen,casillaFinal);
+        if (ficha.esMovimientoValido(casillaOrigen,casillaFinal,tablero)){
+            tablero.moverFicha(casillaOrigen,casillaFinal);
         }
 
         tablero.ImprimirTablero();
+        System.out.println();
 
     }
 

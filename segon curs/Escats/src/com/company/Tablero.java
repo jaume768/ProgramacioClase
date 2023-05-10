@@ -79,13 +79,23 @@ public class Tablero {
 
     public void ImprimirTablero(){
 
+        String ANSI_RED = "\u001B[31m";
+        String ANSI_RESET = "\u001B[0m";
+
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
 
                 Ficha ficha = tablero[i][j].getFicha();
 
                 if (tablero[i][j].getFicha() != null){
-                    System.out.print("[" + ficha.getTipo() + "]");
+
+                    if (ficha.getColor().equals("n")){
+                        System.out.print("[" + ANSI_RED + ficha.getTipo() + ANSI_RESET +"]");
+                    } else {
+                        System.out.print("[" + ficha.getTipo()  +"]");
+                    }
+
+
                 } else {
                     System.out.print("[ ]");
                 }
@@ -109,4 +119,15 @@ public class Tablero {
 
     }
 
+    public void moverFicha(Casilla casillaOrigen, Casilla casillaDestino){
+
+        int filaDestino = casillaDestino.getFila();
+        int columnaDestino = casillaDestino.getColumna();
+        Ficha fichaOrigen = casillaOrigen.getFicha();
+
+
+        tablero[filaDestino][columnaDestino] = new Casilla(filaDestino,columnaDestino,fichaOrigen);
+        tablero[casillaOrigen.getFila()][casillaOrigen.getColumna()] = new Casilla(casillaOrigen.getFila(),casillaOrigen.getColumna(),null);
+
+    }
 }
