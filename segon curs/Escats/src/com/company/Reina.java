@@ -21,6 +21,9 @@ public class Reina extends Ficha{
         int CalculoFila = Math.abs(filaDestino - filaOriginal);
         int CalculoColumna = Math.abs(columnaDestino - columnaOriginal);
 
+        Ficha fichaDestino = tablero.getCasilla(filaDestino,columnaDestino).getFicha();
+        Ficha tuFicha = tablero.getCasilla(filaOriginal,columnaOriginal).getFicha();
+
         // Movimiento es vertical, horizontal o diagonal
 
         if (filaDestino == filaOriginal || columnaDestino == columnaOriginal || CalculoFila == CalculoColumna) {
@@ -74,6 +77,9 @@ public class Reina extends Ficha{
                     columnaIntermedia += IncrementoColumna;
                 }
             }
+
+            return fichaDestino == null || !fichaDestino.getColor().equals(tuFicha.getColor());
+
         }
 
         return true;
