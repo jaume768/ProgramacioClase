@@ -13,6 +13,18 @@ public class Caballo extends Ficha{
 
     @Override
     public boolean esMovimientoValido(Casilla casillaOriginal, Casilla casillaDestino, Tablero tablero) {
-        return false;
+
+        int filaOriginal = casillaOriginal.getFila();
+        int columnaOriginal = casillaOriginal.getColumna();
+        int filaDestino = casillaDestino.getFila();
+        int columnaDestino = casillaDestino.getColumna();
+
+        int CalculoFila = Math.abs(filaDestino - filaOriginal);
+        int CalculoColumna = Math.abs(columnaDestino - columnaOriginal);
+
+        Ficha ficha = tablero.getCasilla(filaDestino,columnaDestino).getFicha();
+
+        return (CalculoFila == 2 && CalculoColumna == 1) || (CalculoFila == 1 && CalculoColumna == 2) && ficha == null;
+
     }
 }
