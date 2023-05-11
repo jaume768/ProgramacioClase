@@ -24,7 +24,7 @@ public class Rei extends Ficha{
         if ((Math.abs(filaDestino - filaOriginal)) <= 1 && (Math.abs(columnaDestino - columnaOriginal)) <= 1) {
 
             return fichaDestino == null || !fichaDestino.getColor().equals(tuFicha.getColor());
-            
+
         }
 
         return false;
