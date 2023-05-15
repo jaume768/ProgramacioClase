@@ -45,6 +45,9 @@ public class Reina extends Ficha{
                     columnaIntermedia += IncrementoColumna;
 
                 }
+
+                return fichaDestino == null || !fichaDestino.getColor().equals(tuFicha.getColor());
+
             } else if (columnaDestino == columnaOriginal) {
 
                 for (int filaIntermedia = filaOriginal + IncrementoColumna; filaIntermedia != filaDestino;) {
@@ -59,29 +62,28 @@ public class Reina extends Ficha{
 
                     filaIntermedia += IncrementoFila;
                 }
-            } else {
+
+                return fichaDestino == null || !fichaDestino.getColor().equals(tuFicha.getColor());
+
+            } else if (Math.abs(filaDestino - filaOriginal) == Math.abs(columnaDestino - columnaOriginal)) {
 
                 int filaIntermedia = filaOriginal + IncrementoFila;
                 int columnaIntermedia = columnaOriginal + IncrementoColumna;
 
+                // Verificar las fichas intermedias
                 while (filaIntermedia != filaDestino && columnaIntermedia != columnaDestino) {
-
-                    Ficha fichaIntermedia = tablero.getCasilla(filaIntermedia,columnaIntermedia).getFicha();
-
+                    Ficha fichaIntermedia = tablero.getCasilla(filaIntermedia, columnaIntermedia).getFicha();
                     if (fichaIntermedia != null) {
-
                         return false;
-
                     }
                     filaIntermedia += IncrementoFila;
                     columnaIntermedia += IncrementoColumna;
                 }
+
+                return fichaDestino == null || !fichaDestino.getColor().equals(tuFicha.getColor());
             }
-
-            return fichaDestino == null || !fichaDestino.getColor().equals(tuFicha.getColor());
-
         }
 
-        return true;
+        return false;
     }
 }

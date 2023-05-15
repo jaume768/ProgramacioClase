@@ -13,10 +13,6 @@ public class Main {
         Jugador jugador1 = new Jugador("b");
         Jugador jugador2 = new Jugador("n");
 
-        jugador1.moverFicha(tablero,6,3,4,3);
-        jugador1.moverFicha(tablero,7,2,3,6);
-
-
         /*
 
         Un peon mata a otro

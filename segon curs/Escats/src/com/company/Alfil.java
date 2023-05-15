@@ -12,43 +12,35 @@ public class Alfil extends Ficha{
 
     @Override
     public boolean esMovimientoValido(Casilla casillaOriginal, Casilla casillaDestino, Tablero tablero) {
-
         int filaOriginal = casillaOriginal.getFila();
         int columnaOriginal = casillaOriginal.getColumna();
         int filaDestino = casillaDestino.getFila();
         int columnaDestino = casillaDestino.getColumna();
 
-        Ficha fichaDestino = tablero.getCasilla(filaDestino,columnaDestino).getFicha();
-        Ficha tuFicha = tablero.getCasilla(filaOriginal,columnaOriginal).getFicha();
+        Ficha fichaDestino = tablero.getCasilla(filaDestino, columnaDestino).getFicha();
+        Ficha tuFicha = tablero.getCasilla(filaOriginal, columnaOriginal).getFicha();
 
-        // la condicion del if mira si es un movimiento diagonal
-        if ((Math.abs(filaDestino - filaOriginal)) == (Math.abs(columnaDestino - columnaOriginal))){
+        // Verificar si es un movimiento diagonal
+        if (Math.abs(filaDestino - filaOriginal) == Math.abs(columnaDestino - columnaOriginal)) {
+            int incrementoFila = (filaDestino > filaOriginal) ? 1 : -1;
+            int incrementoColumna = (columnaDestino > columnaOriginal) ? 1 : -1;
 
-            int FilaCalculo = (filaDestino > filaOriginal) ? 1 : -1;
-            int ColumnaCalculo = (columnaDestino > columnaOriginal) ? 1 : -1;
+            int filaIntermedia = filaOriginal + incrementoFila;
+            int columnaIntermedia = columnaOriginal + incrementoColumna;
 
-            int filaIntermedia = filaOriginal + FilaCalculo;
-            int columnaIntermedia = columnaOriginal + ColumnaCalculo;
-
-            // Mirar las fichas intermedias
-
+            // Verificar las fichas intermedias
             while (filaIntermedia != filaDestino && columnaIntermedia != columnaDestino) {
-
-                Ficha ficha = tablero.getCasilla(filaIntermedia,columnaIntermedia).getFicha();
-
-                if (ficha != null) {
-                    return true;
+                Ficha fichaIntermedia = tablero.getCasilla(filaIntermedia, columnaIntermedia).getFicha();
+                if (fichaIntermedia != null) {
+                    return false;
                 }
-
-                filaIntermedia += FilaCalculo;
-                columnaIntermedia += ColumnaCalculo;
-
+                filaIntermedia += incrementoFila;
+                columnaIntermedia += incrementoColumna;
             }
 
             return fichaDestino == null || !fichaDestino.getColor().equals(tuFicha.getColor());
-
         }
 
-        return true;
+        return false; // Movimiento inválido si no es diagonal
     }
 }
