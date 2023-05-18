@@ -70,7 +70,6 @@ public class Reina extends Ficha{
                 int filaIntermedia = filaOriginal + IncrementoFila;
                 int columnaIntermedia = columnaOriginal + IncrementoColumna;
 
-                // Verificar las fichas intermedias
                 while (filaIntermedia != filaDestino && columnaIntermedia != columnaDestino) {
                     Ficha fichaIntermedia = tablero.getCasilla(filaIntermedia, columnaIntermedia).getFicha();
                     if (fichaIntermedia != null) {

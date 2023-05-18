@@ -125,9 +125,19 @@ public class Tablero {
         int columnaDestino = casillaDestino.getColumna();
         Ficha fichaOrigen = casillaOrigen.getFicha();
 
-
-        tablero[filaDestino][columnaDestino] = new Casilla(filaDestino,columnaDestino,fichaOrigen);
-        tablero[casillaOrigen.getFila()][casillaOrigen.getColumna()] = new Casilla(casillaOrigen.getFila(),casillaOrigen.getColumna(),null);
+        Ficha ficha = casillaOrigen.getFicha();
+        char peon = 'P';
+        
+        if (ficha.getTipo() == peon && filaDestino == 0 && ficha.getColor().equals("b")){
+            tablero[filaDestino][columnaDestino] = new Casilla(filaDestino,columnaDestino,new Reina(filaDestino,columnaDestino,"b"));
+            tablero[casillaOrigen.getFila()][casillaOrigen.getColumna()] = new Casilla(casillaOrigen.getFila(),casillaOrigen.getColumna(),null);
+        } else if (ficha.getTipo() == peon && filaDestino == 7 && ficha.getColor().equals("n")){
+            tablero[filaDestino][columnaDestino] = new Casilla(filaDestino,columnaDestino,new Reina(filaDestino,columnaDestino,"n"));
+            tablero[casillaOrigen.getFila()][casillaOrigen.getColumna()] = new Casilla(casillaOrigen.getFila(),casillaOrigen.getColumna(),null);
+        } else {
+            tablero[filaDestino][columnaDestino] = new Casilla(filaDestino,columnaDestino,fichaOrigen);
+            tablero[casillaOrigen.getFila()][casillaOrigen.getColumna()] = new Casilla(casillaOrigen.getFila(),casillaOrigen.getColumna(),null);
+        }
 
     }
 }

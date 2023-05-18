@@ -18,7 +18,6 @@ public class Torre extends Ficha{
         int columnaOriginal = casillaOriginal.getColumna();
         int filaDestino = casillaDestino.getFila();
         int columnaDestino = casillaDestino.getColumna();
-        String color = casillaOriginal.getFicha().getColor();
 
         Ficha fichaDestino = casillaDestino.getFicha();
         Ficha fichaOrigen = casillaOriginal.getFicha();
