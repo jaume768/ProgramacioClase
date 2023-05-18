@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38e16a5a-f771-4768-aef4-66c9270852f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Casilla.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Ficha.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Gato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Jugador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Raton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Escats/out/production/Escats/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Escats/out/production/Escats/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Escats/out/production/Escats/com/company/Reina.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Escats/out/production/Escats/com/company/Reina.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Escats/out/production/Escats/com/company/Tablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Escats/out/production/Escats/com/company/Tablero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Escats/out/production/Escats/com/company/Torre.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Escats/out/production/Escats/com/company/Torre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Escats/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Escats/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Escats/src/com/company/Reina.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Escats/src/com/company/Reina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Escats/src/com/company/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Escats/src/com/company/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Escats/src/com/company/Torre.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Escats/src/com/company/Torre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Ficha.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Ficha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Gato.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Gato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Raton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Raton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Tablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Tablero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Ficha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Gato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Gato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Raton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Raton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Tablero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

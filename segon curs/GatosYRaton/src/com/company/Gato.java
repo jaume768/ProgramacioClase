@@ -25,6 +25,11 @@ public class Gato extends Ficha {
 
         Ficha fichaDestino = tablero.getCasilla(filaDestino, columnaDestino).getFicha();
 
+        // verificar no se pueda salir del tablero
+        if ((columnaDestino < 0 || columnaDestino > 7) && filaDestino > 7 || filaDestino < 0){
+            return false;
+        }
+
         // Verificar si es un movimiento diagonal
         if (Math.abs(filaDestino - filaOriginal) == Math.abs(columnaDestino - columnaOriginal)) {
 
