@@ -21,6 +21,8 @@ public class Main {
         jugador2.moverFicha(tablero,6,5,5,6);
         jugador2.moverFicha(tablero,5,6,4,7);
 
+        tablero.esJaqueMate();
+
     }
 
     private boolean esValido(int fila, int columna) {

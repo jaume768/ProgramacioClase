@@ -116,13 +116,13 @@ public class Tablero {
         int fila = casillaRaton.getFila();
         int columna = casillaRaton.getColumna();
 
-        int[] deltaFilas = {-1, -1, 1, 1};
-        int[] deltaColumnas = {-1, 1, -1, 1};
+        int[] poisblesFiles = {-1, -1, 1, 1};
+        int[] posiblesColumnes = {-1, 1, -1, 1};
 
-        for (int i = 0; i < deltaFilas.length; i++) {
+        for (int i = 0; i < poisblesFiles.length; i++) {
 
-            int nuevaFila = fila + deltaFilas[i];
-            int nuevaColumna = columna + deltaColumnas[i];
+            int nuevaFila = fila + poisblesFiles[i];
+            int nuevaColumna = columna + posiblesColumnes[i];
 
             if (esPosicionValida(nuevaFila, nuevaColumna)) {
 
@@ -137,7 +137,10 @@ public class Tablero {
     }
 
     private boolean esPosicionValida(int fila, int columna) {
-        return fila >= 0 && fila < 8 && columna >= 0 && columna < 8;
+
+        Ficha ficha = tablero[fila][columna].getFicha();
+
+        return fila >= 0 && fila < 8 && columna >= 0 && columna < 8 && ficha == null;
     }
 
 }

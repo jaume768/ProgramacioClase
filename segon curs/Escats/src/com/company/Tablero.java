@@ -3,6 +3,7 @@ package com.company;
 public class Tablero {
 
     private Casilla[][] tablero;
+    private Juego juego = new Juego();
 
     public Tablero(){
 
@@ -139,5 +140,8 @@ public class Tablero {
             tablero[casillaOrigen.getFila()][casillaOrigen.getColumna()] = new Casilla(casillaOrigen.getFila(),casillaOrigen.getColumna(),null);
         }
 
+        juego.esJaqueMate(tablero);
+
     }
+
 }
