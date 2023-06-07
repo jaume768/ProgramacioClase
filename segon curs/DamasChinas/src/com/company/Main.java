@@ -11,6 +11,8 @@ public class Main {
         Jugador jugador1 = new Jugador("b");
         Jugador jugador2 = new Jugador("n");
 
+        System.out.println(tablero.ganador());
+
         jugador1.moverFicha(tablero,5,5,4,4);
         jugador2.moverFicha(tablero,2,2,3,3);
         jugador1.moverFicha(tablero,4,4,2,2);
