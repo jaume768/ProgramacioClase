@@ -2,18 +2,22 @@ package com.company;
 
 public class Juego {
 
-    private Casilla devolverRei(char tipo,String color, Casilla[][] tablero){
+    private Casilla devolverFicha(char tipo,String color, Casilla[][] tablero,int contador){
 
         int fila = 0;
         int columna = 0;
+        int increment = 0;
 
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
 
                 if (tablero[i][j].getFicha() != null && tablero[i][j].getFicha().getTipo() == tipo && tablero[i][j].getFicha().getColor().equals(color)){
 
-                    fila = i;
-                    columna = j;
+                    ++increment;
+                    if (increment == contador){
+                        return tablero[i][j];
+                    }
+
                 }
 
             }
@@ -22,7 +26,7 @@ public class Juego {
 
         Casilla casillaRei = new Casilla(fila,columna,tablero[fila][columna].getFicha());
 
-        if (casillaRei.getFicha().getTipo() != 'K'){
+        if (casillaRei.getFicha().getTipo() != tipo){
             casillaRei = null;
         }
 
@@ -32,39 +36,12 @@ public class Juego {
 
     public boolean esJaqueMate(Casilla[][] tablero){
 
-        Casilla casillaRei = devolverRei('K',"b",tablero);
-        int fila = casillaRei.getFila();
-        int columna = casillaRei.getColumna();
+        Casilla casillaReiBlanco = devolverFicha('K',"b",tablero,1);
 
-        int[] poisblesFiles = {-1, -1, -1, 0, 0, 1, 1, 1, 0};
-        int[] posiblesColumnes = {-1, 0, 1, -1, 1, -1, 0, 1, 0};
+        Casilla casillaReiNegro = devolverFicha('K',"n",tablero,1);
 
-        for (int i = 0; i < poisblesFiles.length; i++) {
+        return (casillaReiNegro == null || casillaReiBlanco == null);
 
-            int nuevaFila = fila + poisblesFiles[i];
-            int nuevaColumna = columna + posiblesColumnes[i];
-
-            if (esPosicionValida(nuevaFila, nuevaColumna,tablero)) {
-
-                // anar ficha per ficha contraria, mirant si despres de fer el moviment a la fila i a la columna, el rei segueix viu
-
-            }
-
-        }
-
-        return true;
-
-    }
-
-    private boolean esPosicionValida(int fila, int columna,Casilla[][] tablero) {
-
-        Ficha ficha = null;
-
-        if (fila >= 0 && fila < 8 && columna >= 0 && columna < 8 ){
-            ficha = tablero[fila][columna].getFicha();
-        }
-
-        return fila >= 0 && fila < 8 && columna >= 0 && columna < 8 && ficha == null;
     }
 
 }
