@@ -23,19 +23,19 @@ public class Peon extends Ficha{
 
         Ficha ficha = casillaOrigen.getFicha();
 
-        // Verificar si el movimiento es diagonal y tiene una distancia de 1 casilla
-        if (Math.abs(filaDestino - filaOrigen) == 1 && Math.abs(columnaDestino - columnaOrigen) == 1) {
+        boolean esMovimientoDiagonal = Math.abs(filaDestino - filaOrigen) == 1 && Math.abs(columnaDestino - columnaOrigen) == 1;
+        boolean esMovimientoDiagonalLargo = Math.abs(filaDestino - filaOrigen) == 2 && Math.abs(columnaDestino - columnaOrigen) == 2;
+
+        if (esMovimientoDiagonal) {
             return true;
         }
 
-        // Verificar si el movimiento es diagonal y tiene una distancia de 2 casillas
-        if (Math.abs(filaDestino - filaOrigen) == 2 && Math.abs(columnaDestino - columnaOrigen) == 2) {
+        if (esMovimientoDiagonalLargo) {
             int filaIntermedia = (filaOrigen + filaDestino) / 2;
             int columnaIntermedia = (columnaOrigen + columnaDestino) / 2;
 
-            Casilla casillaIntermedia = tablero.getCasilla(filaIntermedia,columnaIntermedia);
+            Casilla casillaIntermedia = tablero.getCasilla(filaIntermedia, columnaIntermedia);
 
-            // Verificar si hay una ficha en la casilla intermedia y es de un color diferente
             return casillaIntermedia.getFicha() != null && !casillaIntermedia.getFicha().getColor().equals(ficha.getColor());
         }
 
