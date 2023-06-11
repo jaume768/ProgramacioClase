@@ -69,9 +69,10 @@ public class Tablero {
     }
 
     public boolean hayGanador(int fila, int columna,int numero) {
-        int jMinRow = columna - 3 < 0 ? 0 : columna - 3;
-        int jMaxRow = columna > columnas - 4 ? columnas - 4 : columna;
-        for (int j = jMinRow; j <= jMaxRow; j++) {
+        int jMin = Math.max(0, columna - 3);
+        int jMax = Math.min(columna, columnas - 4);
+
+        for (int j = jMin; j <= jMax; j++) {
             if (tablero[fila][j].getFicha().getNumero() == numero
                     && tablero[fila][j + 1].getFicha().getNumero() == numero
                     && tablero[fila][j + 2].getFicha().getNumero() == numero
@@ -80,9 +81,10 @@ public class Tablero {
             }
         }
 
-        int iMinColumn = fila - 3 < 0 ? 0 : fila - 3;
-        int iMaxColumn = fila > filas - 4 ? filas - 4 : fila;
-        for (int i = iMinColumn; i <= iMaxColumn; i++) {
+        int iMin = Math.max(0, fila - 3);
+        int iMax = Math.min(fila, filas - 4);
+
+        for (int i = iMin; i <= iMax; i++) {
             if (tablero[i][columna].getFicha().getNumero() == numero
                     && tablero[i + 1][columna].getFicha().getNumero() == numero
                     && tablero[i + 2][columna].getFicha().getNumero() == numero
@@ -91,42 +93,39 @@ public class Tablero {
             }
         }
 
-        int iStartDiagonalUp = fila - 3 < 0 ? 0 : fila - 3;
-        int iEndDiagonalUp = fila;
-        int jStartDiagonalUp = columna - (fila - iStartDiagonalUp);
-        int jEndDiagonalUp = columna - (fila - iEndDiagonalUp);
-        jStartDiagonalUp = jStartDiagonalUp < 0 ? 0 : jStartDiagonalUp;
-        jEndDiagonalUp = jEndDiagonalUp > columnas - 4 ? columnas - 4 : jEndDiagonalUp;
-        for (int i = iStartDiagonalUp; i <= iEndDiagonalUp; i++) {
+        int iStart = Math.max(3, fila);
+        int iEnd = filas - 1;
+
+        for (int i = iStart; i <= iEnd; i++) {
             int j = columna - (fila - i);
-            if (j >= 0 && j <= columnas - 4) {
-                if (tablero[i][j].getFicha().getNumero() == numero
-                        && tablero[i - 1][j + 1].getFicha().getNumero() == numero
-                        && tablero[i - 2][j + 2].getFicha().getNumero() == numero
-                        && tablero[i - 3][j + 3].getFicha().getNumero() == numero) {
+            int jMinDiagonal = Math.max(0, j);
+            int jMaxDiagonal = Math.min(j + 3, columnas - 1);
+            if (jMinDiagonal <= jMaxDiagonal) {
+                if (tablero[i][jMinDiagonal].getFicha().getNumero() == numero
+                        && tablero[i - 1][jMinDiagonal + 1].getFicha().getNumero() == numero
+                        && tablero[i - 2][jMinDiagonal + 2].getFicha().getNumero() == numero
+                        && tablero[i - 3][jMinDiagonal + 3].getFicha().getNumero() == numero) {
                     return true;
                 }
             }
         }
 
-        int iStartDiagonalDown = fila;
-        int iEndDiagonalDown = fila + 3;
-        int jStartDiagonalDown = columna - (iStartDiagonalDown - fila);
-        int jEndDiagonalDown = columna - (iEndDiagonalDown - fila);
-        jStartDiagonalDown = jStartDiagonalDown < 0 ? 0 : jStartDiagonalDown;
-        jEndDiagonalDown = jEndDiagonalDown > columnas - 4 ? columnas - 4 : jEndDiagonalDown;
-        for (int i = iStartDiagonalDown; i <= iEndDiagonalDown; i++) {
-            int j = columna - (i - fila);
-            if (j >= 0 && j <= columnas - 4) {
-                if (tablero[i][j].getFicha().getNumero() == numero
-                        && tablero[i + 1][j + 1].getFicha().getNumero() == numero
-                        && tablero[i + 2][j + 2].getFicha().getNumero() == numero
-                        && tablero[i + 3][j + 3].getFicha().getNumero() == numero) {
+        int iStartReverse = Math.min(fila, filas - 4);
+        int iEndReverse = Math.max(3, iStartReverse);
+
+        for (int i = iStartReverse; i >= iEndReverse; i--) {
+            int j = columna - (fila - i);
+            int jMinDiagonalReverse = Math.max(0, j);
+            int jMaxDiagonalReverse = Math.min(j + 3, columnas - 1);
+            if (jMinDiagonalReverse <= jMaxDiagonalReverse) {
+                if (tablero[i][jMinDiagonalReverse].getFicha().getNumero() == numero
+                        && tablero[i + 1][jMinDiagonalReverse + 1].getFicha().getNumero() == numero
+                        && tablero[i + 2][jMinDiagonalReverse + 2].getFicha().getNumero() == numero
+                        && tablero[i + 3][jMinDiagonalReverse + 3].getFicha().getNumero() == numero) {
                     return true;
                 }
             }
         }
-
         return false;
-
+    }
 }

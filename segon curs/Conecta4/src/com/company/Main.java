@@ -9,7 +9,6 @@ public class Main {
         tablero.insertarFicha(0,1);
         tablero.insertarFicha(0,1);
         tablero.insertarFicha(0,1);
-        tablero.insertarFicha(0,1);
 
         System.out.println(tablero.hayGanador(7,0,1));
 
