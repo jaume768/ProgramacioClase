@@ -28,7 +28,9 @@ public class Jugador {
 
         // Verificar si ha pasado por encima de una dama rival y matarla en el caso correcto
 
-        if ((filaDestino - filaOrigen) == 2 && (columnaDestino - columnaOrigen) == 2 || (columnaDestino-columnaOrigen) == -2 || (filaDestino - filaOrigen) == -2){
+        if ((filaDestino - filaOrigen) == 2 && (columnaDestino - columnaOrigen) == 2
+                || (columnaDestino-columnaOrigen) == -2
+                || (filaDestino - filaOrigen) == -2){
             int fila = 0;
             int colum = 0;
 
