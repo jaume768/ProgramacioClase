@@ -8,7 +8,7 @@ public abstract class Ficha {
     private int columna;
     private String color;
 
-    public Ficha(int fila, int columna, String color) {
+    public Ficha(int fila, int columna,String color) {
 
         this.fila = fila;
         this.columna = columna;
