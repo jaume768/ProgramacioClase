@@ -15,10 +15,19 @@ public class Juego {
 
         while (!tablero.tableroLleno()){
 
+            String missatge = jugadorActual.getNumero() == 1 ? "X" : "O";
+
+            System.out.println("Turno del jugador " + missatge + ": ");
+
             System.out.println("Dime done quieres insertar una ficha: " );
             int columna = sc.nextInt();
 
-            jugadorActual.insertarFicha(tablero,columna);
+            if (verificarTamanyo(columna)){
+                jugadorActual.insertarFicha(tablero,columna);
+            } else {
+                System.out.println("Tamaño incorrecto, vuelve a insertar la ficha");
+                continue;
+            }
 
             if (tablero.hayGanador(tablero.ultimaFichaInsertada(columna),columna,jugadorActual.getNumero())){
 
@@ -36,6 +45,12 @@ public class Juego {
         }
 
         tablero.imprimirTablero();
+
+    }
+
+    private boolean verificarTamanyo(int columna){
+
+        return (columna <= 7 && columna >= 0);
 
     }
 
