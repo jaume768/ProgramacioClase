@@ -13,6 +13,10 @@ public class Tablero {
         inicializarTablero();
     }
 
+    public int getColumnas() {
+        return columnas;
+    }
+
     private void inicializarTablero() {
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
@@ -21,25 +25,36 @@ public class Tablero {
         }
     }
 
+    public int ultimaFichaInsertada(int columna){
+        int filaUltimaFicha = -1;
+
+        for (int fila = filas - 1; fila >= 0; fila--) {
+            if (tablero[fila][columna].getFicha() != null) {
+                filaUltimaFicha = fila;
+                break;
+            }
+        }
+
+        return filaUltimaFicha;
+
+    }
+
     public void imprimirTablero() {
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-
-                if (tablero[i][j].getFicha().getNumero() == 0){
-                    System.out.print("|   ");
-                } else {
-                    System.out.print("| " + tablero[i][j].getFicha().getNumero() + " ");
+                if (tablero[i][j].getFicha().getNumero() == 0) {
+                    System.out.print("\u001B[37m|   |"); // Color blanco para fichas vacías
+                } else if (tablero[i][j].getFicha().getNumero() == 1) {
+                    System.out.print("\u001B[31m| X |"); // Color rojo para fichas del jugador 1
+                } else if (tablero[i][j].getFicha().getNumero() == 2) {
+                    System.out.print("\u001B[34m| O |"); // Color azul para fichas del jugador 2
                 }
             }
-            System.out.println("|");
+            System.out.println(" "); // Restaurar el color blanco al final de la línea
         }
 
         System.out.print(" ");
-
-        for (int j = 0; j < columnas; j++) {
-            System.out.print("===");
-        }
-        System.out.println();
+        System.out.println("\u001B[0m"); // Restaurar el color predeterminado
     }
 
     public boolean insertarFicha(int columna, int numero) {
@@ -93,21 +108,24 @@ public class Tablero {
             }
         }
 
-        int iStart = Math.max(3, fila);
-        int iEnd = filas - 1;
+        if (columna != 7){
+            int iStart = Math.max(3, fila);
+            int iEnd = filas - 1;
 
-        for (int i = iStart; i <= iEnd; i++) {
-            int j = columna - (fila - i);
-            int jMinDiagonal = Math.max(0, j);
-            int jMaxDiagonal = Math.min(j + 3, columnas - 1);
-            if (jMinDiagonal <= jMaxDiagonal) {
-                if (tablero[i][jMinDiagonal].getFicha().getNumero() == numero
-                        && tablero[i - 1][jMinDiagonal + 1].getFicha().getNumero() == numero
-                        && tablero[i - 2][jMinDiagonal + 2].getFicha().getNumero() == numero
-                        && tablero[i - 3][jMinDiagonal + 3].getFicha().getNumero() == numero) {
-                    return true;
+            for (int i = iStart; i <= iEnd; i++) {
+                int j = columna - (fila - i);
+                int jMinDiagonal = Math.max(0, j);
+                int jMaxDiagonal = Math.min(j + 3, columnas - 1);
+                if (jMinDiagonal <= jMaxDiagonal) {
+                    if (tablero[i][jMinDiagonal].getFicha().getNumero() == numero
+                            && tablero[i - 1][jMinDiagonal + 1].getFicha().getNumero() == numero
+                            && tablero[i - 2][jMinDiagonal + 2].getFicha().getNumero() == numero
+                            && tablero[i - 3][jMinDiagonal + 3].getFicha().getNumero() == numero) {
+                        return true;
+                    }
                 }
             }
+
         }
 
         int iStartReverse = Math.min(fila, filas - 4);
@@ -126,6 +144,7 @@ public class Tablero {
                 }
             }
         }
+
         return false;
     }
 }
