@@ -21,7 +21,9 @@ public class Jugador implements JugadorInter {
         Casilla casillaOrigen = juego.getCasilla(filaOrigen,columnaOrigen);
         Casilla casillaFinal = juego.getCasilla(filaDestino,columnaDestino);
 
-        verificarMovimiento(juego.getTablero(),casillaFinal);
+        if (verificarMovimiento(juego.getTablero(), casillaFinal)){
+            System.out.println("prueba");
+        }
 
         Ficha ficha = juego.getCasilla(casillaOrigen.getFila(),casillaOrigen.getColumna()).getFicha();
 
@@ -35,7 +37,9 @@ public class Jugador implements JugadorInter {
     }
 
     @Override
-    public void verificarMovimiento(Casilla[][] tablero, Casilla casillaFinal) {
+    public boolean verificarMovimiento(Casilla[][] tablero, Casilla casillaFinal) {
+
+        return (tablero[casillaFinal.getFila()][casillaFinal.getColumna()].getFicha() != null && tablero[casillaFinal.getFila()][casillaFinal.getColumna()].getFicha().getColor().equals(color));
 
     }
 

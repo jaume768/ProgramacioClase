@@ -1,8 +1,5 @@
 package Factory;
-import Juegos.Ajedrez;
-import Juegos.Damas;
-import Juegos.DamasChinas;
-import Juegos.Juego;
+import Juegos.*;
 
 public class JuegoFactoryImpl implements JuegoFactory{
     @Override
@@ -13,6 +10,8 @@ public class JuegoFactoryImpl implements JuegoFactory{
             return new Damas();
         } else if (tipoJuego.equals("damas chinas")) {
             return new DamasChinas();
+        } else if (tipoJuego.equals("gato y raton")) {
+            return new GatoYRaton();
         }
         return null;
     }

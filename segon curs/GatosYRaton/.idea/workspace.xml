@@ -5,25 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38e16a5a-f771-4768-aef4-66c9270852f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/Dama.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/DamaChina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FinalTot/src/Juegos/Damas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FinalTot/src/Juegos/DamasChinas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Damas/out/production/Damas/com/company/Jugador.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Damas/out/production/Damas/com/company/Jugador.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/Gato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/Raton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTot/src/Juegos/GatoYRaton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Factory/JuegoFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Factory/JuegoFactoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Caballo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Caballo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Ficha.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Ficha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Peon.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Peon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Rei.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Rei.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Reina.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Reina.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Torre.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Fichas/Torre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/Ajedrez.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/Ajedrez.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Jugadores/Jugador.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Jugadores/Jugador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Tableros/TableroInterfaze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Jugadores/JugadorInter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Jugadores/JugadorInter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FinalTot/src/Factory/JuegoFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Factory/JuegoFactoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FinalTot/src/Jugadores/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Jugadores/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Tableros/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Tableros/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Jugadores/JugadorInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Jugadores/JugadorInter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FinalTot/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
