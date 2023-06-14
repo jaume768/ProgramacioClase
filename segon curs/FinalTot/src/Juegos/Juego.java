@@ -10,5 +10,6 @@ public interface Juego {
     void moverFicha(Casilla casillaOrigen, Casilla casillaDestino);
     Casilla getCasilla(int filaOrigen,int columnaOrigen);
     Casilla[][] getTablero();
+    String saberJuego();
 
 }

@@ -120,6 +120,11 @@ public class Ajedrez implements Juego {
         return tablero;
     }
 
+    @Override
+    public String saberJuego() {
+        return "ajedrez";
+    }
+
     public void inicializarTablero() {
 
         for (int i = 0; i < tablero.length; i++) {

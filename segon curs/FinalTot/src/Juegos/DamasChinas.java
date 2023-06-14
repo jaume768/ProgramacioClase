@@ -95,4 +95,9 @@ public class DamasChinas implements Juego{
     public Casilla[][] getTablero() {
         return tablero;
     }
+
+    @Override
+    public String saberJuego() {
+        return "damas chinas";
+    }
 }

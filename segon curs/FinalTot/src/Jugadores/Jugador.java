@@ -16,23 +16,34 @@ public class Jugador implements JugadorInter {
     }
 
     @Override
-    public void moverFicha(Juego juego, int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino) {
+    public boolean moverFicha(Juego juego, int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino) {
 
         Casilla casillaOrigen = juego.getCasilla(filaOrigen,columnaOrigen);
         Casilla casillaFinal = juego.getCasilla(filaDestino,columnaDestino);
 
-        if (verificarMovimiento(juego.getTablero(), casillaFinal)){
-            System.out.println("prueba");
+
+        if (!juego.saberJuego().equals("ajedrez")){
+            if (verificarMovimiento(juego.getTablero(), casillaFinal)){
+
+                return false;
+
+            }
         }
 
         Ficha ficha = juego.getCasilla(casillaOrigen.getFila(),casillaOrigen.getColumna()).getFicha();
 
         if (ficha.esMovimientoValido(casillaOrigen,casillaFinal,juego)){
             juego.moverFicha(casillaOrigen,casillaFinal);
+
+            juego.imprimirTablero();
+            System.out.println();
+
+            return true;
+
         }
 
-        juego.imprimirTablero();
-        System.out.println();
+
+        return false;
 
     }
 

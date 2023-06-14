@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
 
         JuegoFactory juegoFactory = new JuegoFactoryImpl();
-        Juego juego = juegoFactory.crearJuego("gato y raton");
+        Juego juego = juegoFactory.crearJuego("ajedrez");
 
         juego.iniciarJuego();
 
@@ -20,14 +20,12 @@ public class Main {
         Jugador jugador1 = new Jugador("b");
         Jugador jugador2 = new Jugador("n");
 
-        jugador1.moverFicha(juego,0,1,1,2);
-        jugador1.moverFicha(juego,0,3,1,4);
+        jugador1.moverFicha(juego,1,1,3,1);
+        jugador1.moverFicha(juego,3,1,4,1);
+        jugador1.moverFicha(juego,4,1,5,1);
+        jugador1.moverFicha(juego,5,1,6,2);
 
-        jugador2.moverFicha(juego,7,4,6,5);
-        jugador2.moverFicha(juego,6,5,5,6);
-        jugador2.moverFicha(juego,5,6,4,7);
-
-        juego.jugar();
+        jugador1.moverFicha(juego,1,2,3,2);
 
     }
 }
