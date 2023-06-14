@@ -6,6 +6,7 @@ import Fichas.*;
 import Juegos.Juego;
 
 
+
 public class Jugador implements JugadorInter {
 
     private final String color;
@@ -15,20 +16,20 @@ public class Jugador implements JugadorInter {
     }
 
     @Override
-    public void moverFicha(Juego aj, int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino) {
+    public void moverFicha(Juego juego, int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino) {
 
-        Casilla casillaOrigen = aj.getCasilla(filaOrigen,columnaOrigen);
-        Casilla casillaFinal = aj.getCasilla(filaDestino,columnaDestino);
+        Casilla casillaOrigen = juego.getCasilla(filaOrigen,columnaOrigen);
+        Casilla casillaFinal = juego.getCasilla(filaDestino,columnaDestino);
 
-        verificarMovimiento(aj.getTablero(),casillaFinal);
+        verificarMovimiento(juego.getTablero(),casillaFinal);
 
-        Ficha ficha = aj.getCasilla(casillaOrigen.getFila(),casillaOrigen.getColumna()).getFicha();
+        Ficha ficha = juego.getCasilla(casillaOrigen.getFila(),casillaOrigen.getColumna()).getFicha();
 
-        if (ficha.esMovimientoValido(casillaOrigen,casillaFinal,aj)){
-            aj.moverFicha(casillaOrigen,casillaFinal);
+        if (ficha.esMovimientoValido(casillaOrigen,casillaFinal,juego)){
+            juego.moverFicha(casillaOrigen,casillaFinal);
         }
 
-        aj.imprimirTablero();
+        juego.imprimirTablero();
         System.out.println();
 
     }
