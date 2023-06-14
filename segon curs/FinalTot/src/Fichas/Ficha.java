@@ -1,6 +1,6 @@
 package Fichas;
 import Casillas.Casilla;
-import Tableros.Tablero;
+import Juegos.Juego;
 
 public abstract class Ficha {
 
@@ -21,5 +21,5 @@ public abstract class Ficha {
 
     public abstract char getTipo();
 
-    public abstract boolean esMovimientoValido(Casilla casillaOriginal, Casilla casillaDestino, Tablero tablero);
+    public abstract boolean esMovimientoValido(Casilla casillaOriginal, Casilla casillaDestino, Juego juego);
 }

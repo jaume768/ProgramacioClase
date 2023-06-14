@@ -1,13 +1,14 @@
 package Juegos;
-import Jugadores.Jugador;
-import Tableros.Tablero;
+import Casillas.Casilla;
 
-public abstract class Juego {
-    protected Tablero tablero;
-    protected Jugador jugador1;
-    protected Jugador jugador2;
+public interface Juego {
 
-    public abstract void iniciarJuego();
-    public abstract void jugar();
-    public abstract boolean hayGanador();
+    void iniciarJuego();
+    void jugar();
+    boolean hayGanador(Casilla[][] tablero);
+    void imprimirTablero();
+    void moverFicha(Casilla casillaOrigen, Casilla casillaDestino);
+    Casilla getCasilla(int filaOrigen,int columnaOrigen);
+    Casilla[][] getTablero();
+
 }

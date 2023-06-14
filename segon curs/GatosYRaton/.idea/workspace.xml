@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38e16a5a-f771-4768-aef4-66c9270852f2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Escats/src/com/company/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Escats/src/com/company/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Tablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GatosYRaton/com/company/Tablero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Tablero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTot/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTot/src/Juegos/Ajedrez.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTot/src/Jugadores/JugadorInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Fichas/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/Ficha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Juegos/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Juegos/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Jugadores/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Jugadores/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Tableros/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Tableros/TableroInterfaze.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
