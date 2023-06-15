@@ -3,10 +3,15 @@ package Juegos;
 import Casillas.Casilla;
 import Fichas.DamaChina;
 import Fichas.Ficha;
+import Tableros.Tablero;
 
-public class DamasChinas implements Juego{
+public class DamasChinas extends JuegoAbs implements Juego{
 
-    Casilla[][] tablero = new Casilla[8][8];
+    Casilla[][] tablero = t.getTablero();
+
+    public DamasChinas(Tablero t) {
+        super(t);
+    }
 
     @Override
     public void iniciarJuego() {
@@ -43,35 +48,13 @@ public class DamasChinas implements Juego{
     }
 
     @Override
-    public boolean hayGanador(Casilla[][] tablero) {
+    public boolean hayGanador() {
         return false;
     }
 
     @Override
     public void imprimirTablero() {
-
-        String ANSI_RED = "\u001B[31m";
-        String ANSI_RESET = "\u001B[0m";
-
-        for (int i = 0; i < tablero.length; i++) {
-            for (int j = 0; j < tablero.length; j++) {
-
-                Ficha ficha = tablero[i][j].getFicha();
-
-                if (tablero[i][j].getFicha() == null){
-                    System.out.print("[ ]");
-                } else if (ficha.getColor().equals("n")){
-                    System.out.print("[" + ANSI_RED + ficha.getTipo() + ANSI_RESET +"]");
-                } else {
-                    System.out.print("[" + ficha.getTipo()  +"]");
-                }
-
-            }
-
-            System.out.println();
-
-        }
-
+        t.imprimirTablero();
     }
 
     @Override
@@ -89,11 +72,6 @@ public class DamasChinas implements Juego{
     @Override
     public Casilla getCasilla(int filaOrigen, int columnaOrigen) {
         return tablero[filaOrigen][columnaOrigen];
-    }
-
-    @Override
-    public Casilla[][] getTablero() {
-        return tablero;
     }
 
     @Override

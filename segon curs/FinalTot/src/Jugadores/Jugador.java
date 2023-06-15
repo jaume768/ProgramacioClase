@@ -1,7 +1,6 @@
 package Jugadores;
 
 import Casillas.Casilla;
-import Juegos.Ajedrez;
 import Fichas.*;
 import Juegos.Juego;
 

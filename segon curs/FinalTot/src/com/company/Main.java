@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Scanner;
 
 import Factory.JuegoFactory;
 import Factory.JuegoFactoryImpl;
@@ -9,23 +10,37 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+        Scanner sc = new Scanner(System.in);
+
         JuegoFactory juegoFactory = new JuegoFactoryImpl();
-        Juego juego = juegoFactory.crearJuego("ajedrez");
+        System.out.println("Que juego quieres jugar?");
+        System.out.println(" - ajedrez \n - damas \n - damas chinas \n - gato y raton");
+        String jugarJuego = sc.nextLine();
+        Juego juego = juegoFactory.crearJuego(jugarJuego);
 
         juego.iniciarJuego();
-
-        juego.imprimirTablero();
         System.out.println();
 
         Jugador jugador1 = new Jugador("b");
         Jugador jugador2 = new Jugador("n");
 
-        jugador1.moverFicha(juego,1,1,3,1);
-        jugador1.moverFicha(juego,3,1,4,1);
-        jugador1.moverFicha(juego,4,1,5,1);
-        jugador1.moverFicha(juego,5,1,6,2);
+        while (!juego.hayGanador()){
+            System.out.println("Que ficha quieres mover?");
+            System.out.println("Fila? ");
+            int filaOrigen = sc.nextInt();
+            System.out.println("Columna? ");
+            int columnaOrigen = sc.nextInt();
 
-        jugador1.moverFicha(juego,1,2,3,2);
+            System.out.println("Donde la quieres mover? ");
+            System.out.println("Fila? ");
+            int filaDestino = sc.nextInt();
+            System.out.println("Columna? ");
+            int columnaDestino = sc.nextInt();
+
+            jugador1.moverFicha(juego,filaOrigen,columnaOrigen,filaDestino,columnaDestino);
+
+        }
 
     }
 }

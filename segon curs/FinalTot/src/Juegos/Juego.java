@@ -5,11 +5,10 @@ public interface Juego {
 
     void iniciarJuego();
     void jugar();
-    boolean hayGanador(Casilla[][] tablero);
+    boolean hayGanador();
     void imprimirTablero();
     void moverFicha(Casilla casillaOrigen, Casilla casillaDestino);
     Casilla getCasilla(int filaOrigen,int columnaOrigen);
-    Casilla[][] getTablero();
     String saberJuego();
 
 }

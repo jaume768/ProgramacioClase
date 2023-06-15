@@ -4,10 +4,15 @@ import Casillas.Casilla;
 import Fichas.Ficha;
 import Fichas.Gato;
 import Fichas.Raton;
+import Tableros.Tablero;
 
-public class GatoYRaton implements Juego{
+public class GatoYRaton extends JuegoAbs implements Juego{
 
-    Casilla[][] tablero = new Casilla[8][8];
+    Casilla[][] tablero = t.getTablero();
+
+    public GatoYRaton(Tablero t) {
+        super(t);
+    }
 
     @Override
     public void iniciarJuego() {
@@ -48,39 +53,12 @@ public class GatoYRaton implements Juego{
     }
 
     @Override
-    public boolean hayGanador(Casilla[][] tablero) {
+    public boolean hayGanador() {
         return false;
     }
 
     @Override
     public void imprimirTablero() {
-
-        String ANSI_RED = "\u001B[31m";
-        String ANSI_RESET = "\u001B[0m";
-
-        for (int i = 0; i < tablero.length; i++) {
-            for (int j = 0; j < tablero.length; j++) {
-
-                Ficha ficha = tablero[i][j].getFicha();
-
-                if (tablero[i][j].getFicha() != null){
-
-                    if (ficha.getColor().equals("G")){
-                        System.out.print("[" + ANSI_RED + ficha.getTipo() + ANSI_RESET +"]");
-                    } else {
-                        System.out.print("[" + ficha.getTipo()  +"]");
-                    }
-
-
-                } else {
-                    System.out.print("[ ]");
-                }
-
-            }
-
-            System.out.println();
-
-        }
 
     }
 
@@ -160,11 +138,6 @@ public class GatoYRaton implements Juego{
     @Override
     public Casilla getCasilla(int filaOrigen, int columnaOrigen) {
         return tablero[filaOrigen][columnaOrigen];
-    }
-
-    @Override
-    public Casilla[][] getTablero() {
-        return tablero;
     }
 
     @Override
