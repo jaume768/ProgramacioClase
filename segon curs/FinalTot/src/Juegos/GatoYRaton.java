@@ -59,7 +59,7 @@ public class GatoYRaton extends JuegoAbs implements Juego{
 
     @Override
     public void imprimirTablero() {
-
+        t.imprimirTablero();
     }
 
     @Override
@@ -99,7 +99,6 @@ public class GatoYRaton extends JuegoAbs implements Juego{
         return true;
 
     }
-
 
     private Casilla devolverRaton(){
 
@@ -143,5 +142,10 @@ public class GatoYRaton extends JuegoAbs implements Juego{
     @Override
     public String saberJuego() {
         return "gato y raton";
+    }
+
+    @Override
+    public Casilla[][] getTablero() {
+        return t.getTablero();
     }
 }

@@ -107,4 +107,9 @@ public class Damas extends JuegoAbs implements Juego {
     public String saberJuego() {
         return "damas";
     }
+
+    @Override
+    public Casilla[][] getTablero() {
+        return t.getTablero();
+    }
 }

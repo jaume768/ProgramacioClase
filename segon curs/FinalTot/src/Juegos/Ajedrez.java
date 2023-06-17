@@ -100,6 +100,11 @@ public class Ajedrez extends JuegoAbs implements Juego  {
         return "ajedrez";
     }
 
+    @Override
+    public Casilla[][] getTablero() {
+        return t.getTablero();
+    }
+
     public void inicializarTablero() {
 
         for (int i = 0; i < tablero.length; i++) {

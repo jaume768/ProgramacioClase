@@ -78,4 +78,9 @@ public class DamasChinas extends JuegoAbs implements Juego{
     public String saberJuego() {
         return "damas chinas";
     }
+
+    @Override
+    public Casilla[][] getTablero() {
+        return t.getTablero();
+    }
 }
