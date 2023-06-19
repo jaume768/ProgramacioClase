@@ -15,7 +15,6 @@ public class Ajedrez extends JuegoAbs implements Juego  {
     public void iniciarJuego() {
 
         inicializarTablero();
-        t.imprimirTablero();
     }
 
     public void imprimirTablero(){

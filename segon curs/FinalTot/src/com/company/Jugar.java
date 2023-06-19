@@ -5,11 +5,12 @@ import Factory.JuegoFactoryImpl;
 import Juegos.Juego;
 import Jugadores.Jugador;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Jugar {
 
-    public void joc(){
+    public ArrayList<String> joc(){
         Scanner sc = new Scanner(System.in);
         Inputs in = new Inputs();
         Outputs ou = new Outputs();
@@ -27,6 +28,8 @@ public class Jugar {
         Jugador jugador1 = new Jugador("b");
         Jugador jugador2 = new Jugador("n");
 
+        ArrayList<String> movimientos = new ArrayList<>();
+
         while (!juego.hayGanador()){
 
             ou.Torn(turno);
@@ -39,9 +42,12 @@ public class Jugar {
             int filaDestino = in.PedirFila();
             int columnaDestino = in.PedirColumna();
 
+            String movimiento = filaOrigen + "-" + columnaOrigen + " a " + filaDestino + "-" + columnaDestino;
+
             if (turno == 1) {
                 if (jugador1.moverFicha(juego, filaOrigen, columnaOrigen, filaDestino, columnaDestino)){
                     turno = 2;
+                    movimientos.add(movimiento);
                 } else {
                     ou.MovimientoInvalido();
                     juego.imprimirTablero();
@@ -49,6 +55,7 @@ public class Jugar {
             } else if (turno == 2) {
                 if (jugador2.moverFicha(juego, filaOrigen, columnaOrigen, filaDestino, columnaDestino)){
                     turno = 1;
+                    movimientos.add(movimiento);
                 }else {
                     ou.MovimientoInvalido();
                     juego.imprimirTablero();
@@ -56,6 +63,8 @@ public class Jugar {
             }
 
         }
+
+        return movimientos;
     }
 
 }

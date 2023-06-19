@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38e16a5a-f771-4768-aef4-66c9270852f2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Fichas/Alfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/Alfil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Fichas/Gato.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/Gato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Fichas/Peon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/Peon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Fichas/Raton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/Raton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Fichas/Reina.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/Reina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Fichas/Torre.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Fichas/Torre.java" afterDir="false" />
-    </list>
+    <list default="true" id="38e16a5a-f771-4768-aef4-66c9270852f2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

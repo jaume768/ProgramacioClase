@@ -1,4 +1,5 @@
 package com.company;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -6,7 +7,7 @@ public class Main {
 
         Jugar jugar = new Jugar();
 
-        jugar.joc();
+        ArrayList<String> movimientos = jugar.joc();
 
     }
 }
