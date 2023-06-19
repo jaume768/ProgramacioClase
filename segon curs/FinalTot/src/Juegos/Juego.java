@@ -4,7 +4,6 @@ import Casillas.Casilla;
 public interface Juego {
 
     void iniciarJuego();
-    void jugar();
     boolean hayGanador();
     void imprimirTablero();
     void moverFicha(Casilla casillaOrigen, Casilla casillaDestino);

@@ -43,13 +43,31 @@ public class DamasChinas extends JuegoAbs implements Juego{
     }
 
     @Override
-    public void jugar() {
-
+    public boolean hayGanador() {
+        if (contarFichasPorColor("b") == 9 || contarFichasPorColor("n") == 9) {
+            System.out.println("Gana el equipo " + (contarFichasPorColor("b") == 9 ? "B" : "N"));
+            return true;
+        }
+        return false;
     }
 
-    @Override
-    public boolean hayGanador() {
-        return false;
+    private int contarFichasPorColor(String color) {
+        int contador = 0;
+
+        int filaInicio = (color.equals("b")) ? 0 : 5;
+        int filaFin = filaInicio + 2;
+        int columnaInicio = (color.equals("b")) ? 0 : 5;
+        int columnaFin = columnaInicio + 2;
+
+        for (int i = filaInicio; i <= filaFin; i++) {
+            for (int j = columnaInicio; j <= columnaFin; j++) {
+                if (tablero[i][j].getFicha() != null && tablero[i][j].getFicha().getColor().equals(color)) {
+                    contador++;
+                }
+            }
+        }
+
+        return contador;
     }
 
     @Override

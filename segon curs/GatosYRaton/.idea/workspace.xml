@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38e16a5a-f771-4768-aef4-66c9270852f2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalTot/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/Ajedrez.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/Ajedrez.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/Damas.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/Damas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/DamasChinas.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/DamasChinas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/GatoYRaton.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/GatoYRaton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/Juego.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/out/production/FinalTot/Juegos/Juego.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Juegos/Ajedrez.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Juegos/Ajedrez.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Juegos/Damas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Juegos/Damas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Juegos/DamasChinas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Juegos/DamasChinas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Juegos/GatoYRaton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Juegos/GatoYRaton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/Juegos/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/Juegos/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/com/company/Jugar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/com/company/Jugar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalTot/src/com/company/Outputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalTot/src/com/company/Outputs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Tablero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

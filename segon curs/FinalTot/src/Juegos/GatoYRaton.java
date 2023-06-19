@@ -35,26 +35,23 @@ public class GatoYRaton extends JuegoAbs implements Juego{
         // iniciar gato
         for (int i = 0; i < 8; i++) {
             if (i % 2 != 0){
-                tablero[0][i] = new Casilla(0,i,new Gato(0,i,"G"));
+                tablero[0][i] = new Casilla(0,i,new Gato(0,i,"n"));
             }
         }
 
         // iniciar ratón
 
-        tablero[7][4] = new Casilla(7,4,new Raton(7,4,"R"));
-
-    }
-
-    @Override
-    public void jugar() {
-
-        System.out.println(esJaqueMate());
+        tablero[7][4] = new Casilla(7,4,new Raton(7,4,"b"));
 
     }
 
     @Override
     public boolean hayGanador() {
-        return false;
+
+        Casilla CasillaRaton = devolverRaton();
+        int FilaFinal = 0;
+
+        return (RatonEnJaque() || CasillaRaton.getFila() == FilaFinal);
     }
 
     @Override
@@ -74,7 +71,7 @@ public class GatoYRaton extends JuegoAbs implements Juego{
 
     }
 
-    public boolean esJaqueMate(){
+    public boolean RatonEnJaque(){
 
         Casilla casillaRaton = devolverRaton();
         int fila = casillaRaton.getFila();

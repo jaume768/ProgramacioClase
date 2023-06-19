@@ -29,7 +29,7 @@ public class Jugar {
 
         while (!juego.hayGanador()){
 
-            System.out.println("Turno del jugador " + turno);
+            ou.Torn(turno);
 
             ou.PedirFicha();
             int filaOrigen = in.PedirFila();
@@ -43,14 +43,14 @@ public class Jugar {
                 if (jugador1.moverFicha(juego, filaOrigen, columnaOrigen, filaDestino, columnaDestino)){
                     turno = 2;
                 } else {
-                    System.out.println("movimiento invalido, vuelve a intentarlo!!");
+                    ou.MovimientoInvalido();
                     juego.imprimirTablero();
                 }
             } else if (turno == 2) {
                 if (jugador2.moverFicha(juego, filaOrigen, columnaOrigen, filaDestino, columnaDestino)){
                     turno = 1;
                 }else {
-                    System.out.println("movimiento invalido, vuelve a intentarlo!!");
+                    ou.MovimientoInvalido();
                     juego.imprimirTablero();
                 }
             }

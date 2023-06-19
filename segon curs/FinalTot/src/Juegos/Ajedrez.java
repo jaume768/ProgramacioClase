@@ -22,10 +22,6 @@ public class Ajedrez extends JuegoAbs implements Juego  {
         t.imprimirTablero();
     }
 
-    @Override
-    public void jugar() {
-
-    }
 
     private Casilla devolverFicha(char tipo,String color, Casilla[][] tablero,int contador){
 

@@ -14,4 +14,12 @@ public class Outputs {
     public void PedirMover(){
         System.out.println("Donde la quieres mover? ");
     }
+
+    public void MovimientoInvalido(){
+        System.out.println("movimiento invalido, vuelve a intentarlo!!");
+    }
+
+    public void Torn(int turno){
+        System.out.println("Turno del jugador " + turno);
+    }
 }

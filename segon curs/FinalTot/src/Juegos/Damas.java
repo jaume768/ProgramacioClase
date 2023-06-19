@@ -38,13 +38,19 @@ public class Damas extends JuegoAbs implements Juego {
     }
 
     @Override
-    public void jugar() {
-
-    }
-
-    @Override
     public boolean hayGanador() {
-        return false;
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero.length; j++) {
+
+                if (tablero[i][j].getFicha() != null){
+                    return false;
+                }
+
+            }
+
+        }
+
+        return true;
     }
 
     @Override
