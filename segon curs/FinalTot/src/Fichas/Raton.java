@@ -23,12 +23,11 @@ public class Raton extends Ficha{
         Ficha fichaDestino = juego.getCasilla(filaDestino, columnaDestino).getFicha();
 
 
-        // verificar no se pueda salir del tablero
         if ((columnaDestino < 0 || columnaDestino > 7) && filaDestino > 7 || filaDestino < 0){
             return false;
         }
 
-        // Verificar si es un movimiento diagonal
+        // Verificar si es un movimient diagonal
         if (Math.abs(filaDestino - filaOriginal) == Math.abs(columnaDestino - columnaOriginal)) {
 
             return Math.abs(filaDestino - filaOriginal) <= 1 || Math.abs(columnaDestino - columnaOriginal) <= 1 && fichaDestino == null;

@@ -24,13 +24,13 @@ public class Torre extends Ficha {
         Ficha fichaDestino = casillaDestino.getFicha();
         Ficha fichaOrigen = casillaOriginal.getFicha();
 
-        // Verificar si el movimiento es horizontal o vertical
+        // Verificar si el movimient es horizontal o vertical
 
         if (filaDestino != filaOriginal && columnaDestino != columnaOriginal) {
             return false;
         }
 
-        // Verificar que no hay ficha por el camino
+        // Verificar fiches intermitges
 
         int increment = ((filaDestino - filaOriginal) > 0) ? 1 : -1;
 
@@ -60,7 +60,7 @@ public class Torre extends Ficha {
 
         }
 
-        // Verificar si hay una ficha rival en la casilla de destino
+        // Verificar si hi ha una ficha rival en el desti
 
         if (fichaDestino != null && !fichaDestino.getColor().equals(fichaOrigen.getColor())) {
 

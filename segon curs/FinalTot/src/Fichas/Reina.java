@@ -26,7 +26,7 @@ public class Reina extends Ficha{
         Ficha fichaDestino = tablero.getCasilla(filaDestino,columnaDestino).getFicha();
         Ficha tuFicha = tablero.getCasilla(filaOriginal,columnaOriginal).getFicha();
 
-        // Movimiento es vertical, horizontal o diagonal
+        // Movimient vertical, horizontal o diagonal
 
         if (filaDestino == filaOriginal || columnaDestino == columnaOriginal || CalculoFila == CalculoColumna) {
 

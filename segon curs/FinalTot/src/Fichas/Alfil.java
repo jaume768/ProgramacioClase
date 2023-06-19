@@ -22,7 +22,7 @@ public class Alfil extends Ficha{
         Ficha fichaDestino = tablero.getCasilla(filaDestino, columnaDestino).getFicha();
         Ficha tuFicha = tablero.getCasilla(filaOriginal, columnaOriginal).getFicha();
 
-        // Verificar si es un movimiento diagonal
+        // Verificar si es un movimient diagonal
         if (Math.abs(filaDestino - filaOriginal) == Math.abs(columnaDestino - columnaOriginal)) {
             int incrementoFila = (filaDestino > filaOriginal) ? 1 : -1;
             int incrementoColumna = (columnaDestino > columnaOriginal) ? 1 : -1;
@@ -30,7 +30,7 @@ public class Alfil extends Ficha{
             int filaIntermedia = filaOriginal + incrementoFila;
             int columnaIntermedia = columnaOriginal + incrementoColumna;
 
-            // Verificar las fichas intermedias
+            // Verificar fichas intermitges
             while (filaIntermedia != filaDestino && columnaIntermedia != columnaDestino) {
                 Ficha fichaIntermedia = tablero.getCasilla(filaIntermedia, columnaIntermedia).getFicha();
                 if (fichaIntermedia != null) {
@@ -43,6 +43,6 @@ public class Alfil extends Ficha{
             return fichaDestino == null || !fichaDestino.getColor().equals(tuFicha.getColor());
         }
 
-        return false; // Movimiento inválido si no es diagonal
+        return false; // Movimiento inválid si no es diagonal
     }
 }
