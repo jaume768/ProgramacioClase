@@ -21,7 +21,6 @@ public class Ajedrez extends JuegoAbs implements Juego  {
         t.imprimirTablero();
     }
 
-
     private Casilla devolverFicha(char tipo,String color, Casilla[][] tablero,int contador){
 
         int fila = 0;
@@ -69,13 +68,16 @@ public class Ajedrez extends JuegoAbs implements Juego  {
         int columnaDestino = casillaDestino.getColumna();
         Ficha fichaOrigen = casillaOrigen.getFicha();
 
+        int FilaFinalBlanques = 0;
+        int FilaFinalVermelles = 0;
+
         Ficha ficha = casillaOrigen.getFicha();
         char peon = 'P';
 
-        if (ficha.getTipo() == peon && filaDestino == 0 && ficha.getColor().equals("b")){
+        if (ficha.getTipo() == peon && filaDestino == FilaFinalBlanques && ficha.getColor().equals("b")){
             tablero[filaDestino][columnaDestino] = new Casilla(filaDestino,columnaDestino,new Reina(filaDestino,columnaDestino,"b"));
             tablero[casillaOrigen.getFila()][casillaOrigen.getColumna()] = new Casilla(casillaOrigen.getFila(),casillaOrigen.getColumna(),null);
-        } else if (ficha.getTipo() == peon && filaDestino == 7 && ficha.getColor().equals("n")){
+        } else if (ficha.getTipo() == peon && filaDestino == FilaFinalVermelles && ficha.getColor().equals("n")){
             tablero[filaDestino][columnaDestino] = new Casilla(filaDestino,columnaDestino,new Reina(filaDestino,columnaDestino,"n"));
             tablero[casillaOrigen.getFila()][casillaOrigen.getColumna()] = new Casilla(casillaOrigen.getFila(),casillaOrigen.getColumna(),null);
         } else {

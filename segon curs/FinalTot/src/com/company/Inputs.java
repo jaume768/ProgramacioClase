@@ -19,4 +19,8 @@ public class Inputs {
 
     }
 
+    public String PedirJuego(){
+        return sc.nextLine();
+    }
+
 }

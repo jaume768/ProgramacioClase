@@ -36,6 +36,9 @@ public class Tablero {
 
         }
 
+
+        System.out.println();
+
     }
 
     public Casilla[][] getTablero() {

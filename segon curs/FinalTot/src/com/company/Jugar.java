@@ -18,12 +18,11 @@ public class Jugar {
 
         JuegoFactory juegoFactory = new JuegoFactoryImpl();
         ou.Menu();
-        String jugarJuego = sc.nextLine();
+        String jugarJuego = in.PedirJuego();
         Juego juego = juegoFactory.crearJuego(jugarJuego);
 
         juego.iniciarJuego();
         juego.imprimirTablero();
-        System.out.println();
 
         Jugador jugador1 = new Jugador("b");
         Jugador jugador2 = new Jugador("n");

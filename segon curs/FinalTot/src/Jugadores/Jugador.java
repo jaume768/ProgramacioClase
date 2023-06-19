@@ -19,7 +19,10 @@ public class Jugador implements JugadorInter {
 
         Casilla casillaOrigen = juego.getCasilla(filaOrigen,columnaOrigen);
         Casilla casillaFinal = juego.getCasilla(filaDestino,columnaDestino);
-
+        
+        if (casillaOrigen.getFicha() == null){
+            return false;
+        }
 
         if (!juego.saberJuego().equals("ajedrez")){
             if (verificarMovimiento(juego.getTablero(), casillaFinal)){
